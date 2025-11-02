@@ -558,7 +558,7 @@ Can you provide candidates within the next hour?"""
         
         col_p1, col_p2, col_p3 = st.columns(3)
         with col_p1:
-    st.metric("Revenue", "$45,230", "+12%")
+            st.metric("Revenue", "$45,230", "+12%")
         with col_p2:
             st.metric("Net Profit", "$13,130")
         with col_p3:
