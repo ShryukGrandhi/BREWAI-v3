@@ -90,17 +90,22 @@ with tab1:
         with st.chat_message("user"):
             st.markdown(prompt)
         
-        # Get response with FULL data context
+        # STEP 1: CAPTAIN analyzes and answers
         with st.chat_message("assistant"):
             from services.captain_client import get_captain_client
             from services.captain_knowledge_loader import format_knowledge_for_captain
+            import google.generativeai as genai
+            import os
+            import plotly.graph_objects as go
+            import json
+            
+            captain_answer = None
             
             try:
                 captain = get_captain_client()
                 
                 if captain:
-                    with st.spinner("🧠 Captain analyzing all data..."):
-                        # Include full knowledge in query
+                    with st.spinner("🧠 CAPTAIN analyzing all data..."):
                         full_context = format_knowledge_for_captain(st.session_state.full_knowledge)
                         
                         enriched_prompt = f"""{full_context}
@@ -110,38 +115,94 @@ USER QUESTION: {prompt}
 Answer using specific data from the knowledge above. Include numbers, names, and details."""
                         
                         response = captain.query("operations", enriched_prompt)
-                        answer = response.get('answer', 'I could not find that information.')
+                        captain_answer = response.get('answer', 'I could not find that information.')
+                        
+                        st.markdown("### 🧠 CAPTAIN's Analysis:")
+                        st.markdown(captain_answer)
                 else:
                     raise Exception("Captain not available")
                     
             except Exception as e:
-                # Gemini fallback with full data
-                st.info("📡 Using Gemini with full data access...")
-                
-                import google.generativeai as genai
-                import os
-                
-                api_key = os.getenv('GEMINI_API_KEY', 'AIzaSyCcw2F4nOy-5kkSSEdpfsK4LuDWcepspCY')
-                genai.configure(api_key=api_key)
-                model = genai.GenerativeModel('gemini-pro')
-                
-                from services.captain_knowledge_loader import format_knowledge_for_captain
-                full_context = format_knowledge_for_captain(st.session_state.full_knowledge)
-                
-                full_prompt = f"""{full_context}
+                st.warning(f"Captain unavailable: {e}")
+                captain_answer = f"Unable to analyze: {prompt}"
+                st.markdown(captain_answer)
+            
+            # STEP 2: GEMINI reads Captain's output and generates a graph
+            if captain_answer and "could not find" not in captain_answer.lower():
+                with st.spinner("📊 GEMINI generating visualization from Captain's analysis..."):
+                    try:
+                        api_key = os.getenv('GEMINI_API_KEY', 'AIzaSyCcw2F4nOy-5kkSSEdpfsK4LuDWcepspCY')
+                        genai.configure(api_key=api_key)
+                        model = genai.GenerativeModel('gemini-pro')
+                        
+                        graph_prompt = f"""Based on this question and Captain's answer, determine what graph would visualize this best.
 
 USER QUESTION: {prompt}
+CAPTAIN'S ANSWER: {captain_answer}
 
-Provide a specific answer using the data above."""
-                
-                try:
-                    gemini_response = model.generate_content(full_prompt)
-                    answer = gemini_response.text
-                except:
-                    answer = "I'm having trouble accessing the data. Please try again."
+Respond with ONLY a JSON object:
+{{
+    "graph_type": "bar|line|pie|none",
+    "x_data": ["label1", "label2"],
+    "y_data": [10, 20],
+    "title": "Graph Title",
+    "x_label": "X Axis",
+    "y_label": "Y Axis"
+}}
+
+If no graph needed, use graph_type: "none"."""
+                        
+                        gemini_response = model.generate_content(graph_prompt)
+                        gemini_text = gemini_response.text
+                        
+                        if "```json" in gemini_text:
+                            json_str = gemini_text.split("```json")[1].split("```")[0].strip()
+                        elif "```" in gemini_text:
+                            json_str = gemini_text.split("```")[1].split("```")[0].strip()
+                        else:
+                            json_str = gemini_text.strip()
+                        
+                        graph_spec = json.loads(json_str)
+                        graph_type = graph_spec.get('graph_type', 'none')
+                        
+                        if graph_type != 'none':
+                            st.markdown("---")
+                            st.markdown("### 📊 GEMINI's Auto-Generated Visualization:")
+                            
+                            if graph_type == 'bar':
+                                fig = go.Figure(data=[go.Bar(
+                                    x=graph_spec['x_data'],
+                                    y=graph_spec['y_data'],
+                                    marker_color='#667eea'
+                                )])
+                            elif graph_type == 'line':
+                                fig = go.Figure(data=[go.Scatter(
+                                    x=graph_spec['x_data'],
+                                    y=graph_spec['y_data'],
+                                    mode='lines+markers',
+                                    line=dict(color='#00ff88', width=3)
+                                )])
+                            elif graph_type == 'pie':
+                                fig = go.Figure(data=[go.Pie(
+                                    labels=graph_spec['x_data'],
+                                    values=graph_spec['y_data'],
+                                    hole=0.4
+                                )])
+                            
+                            if graph_type in ['bar', 'line', 'pie']:
+                                fig.update_layout(
+                                    title=graph_spec.get('title', 'Analysis'),
+                                    template='plotly_dark',
+                                    paper_bgcolor='rgba(0,0,0,0)',
+                                    height=400,
+                                    font=dict(color='white')
+                                )
+                                st.plotly_chart(fig, use_container_width=True, key=f"gemini_{len(st.session_state.messages)}")
+                    
+                    except Exception as e:
+                        st.info(f"Gemini visualization: {str(e)[:100]}")
             
-            st.markdown(answer)
-            st.session_state.messages.append({"role": "assistant", "content": answer})
+            st.session_state.messages.append({"role": "assistant", "content": captain_answer})
 
 with tab2:
     st.markdown("### 🎤 Voice Assistant (Speech-to-Text)")
