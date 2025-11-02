@@ -1,0 +1,10 @@
+{
+  "item": "Chicken Wings (Frozen)",
+  "quantity": 260,
+  "unit": "lbs",
+  "delivery_date": "2025-11-03 08:00",
+  "notes": "Thaw by 10:00. Prep by 10:30. ",
+  "estimated_orders": 218,
+  "thaw_time_hours": 2,
+  "prep_time_minutes": 30
+}

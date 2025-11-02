@@ -1,0 +1,17 @@
+item,current_stock,par_level,unit,cost_per_unit,supplier,last_ordered
+Beef Patties,450,600,lbs,4.50,US Foods,2025-11-01
+Burger Buns,800,1000,units,0.35,Sysco,2025-11-01
+Cheese Slices,600,800,units,0.25,US Foods,2025-10-31
+Lettuce,25,40,heads,2.50,Fresh Direct,2025-11-02
+Tomatoes,30,50,lbs,3.20,Fresh Direct,2025-11-02
+Onions,40,60,lbs,1.80,Fresh Direct,2025-11-01
+Pickles,15,20,jars,8.50,Sysco,2025-10-30
+Ketchup,12,15,gallons,12.00,Sysco,2025-10-29
+Mayonnaise,10,15,gallons,14.50,Sysco,2025-10-29
+Fries (Frozen),200,300,lbs,2.80,US Foods,2025-11-01
+Chicken Breasts,180,250,lbs,5.20,US Foods,2025-11-02
+Buffalo Sauce,8,12,gallons,18.00,Sysco,2025-10-30
+Tortillas,250,350,units,0.40,Sysco,2025-10-31
+Vegetable Mix,40,60,lbs,4.00,Fresh Direct,2025-11-02
+Cooking Oil,25,30,gallons,15.00,US Foods,2025-10-28
+

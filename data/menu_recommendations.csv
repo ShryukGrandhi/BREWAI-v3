@@ -1,0 +1,16 @@
+menu_item,recommendation_title,recommendation_desc,priority,data_source,impact_score
+Cheese Burger,Make the burger less spicy,"Sentiment analysis shows 23% of reviews mention 'too spicy'. Reduce cayenne by 30%.",high,reviews,8.5
+Cheese Burger,Speed up kitchen prep,"Burgers average 12 min cook time. Target: 8 min to reduce 'cold food' complaints.",high,operations,9.2
+Cheese Burger,Improve packaging,"15% of refunds are for 'cold food'. Invest in insulated packaging (+$0.50/order).",medium,refunds,7.8
+Fries,Add seasoning variety,"Customers request 'cajun' and 'garlic' options. Easy upsell (+$1.50).",high,reviews,8.9
+Fries,Optimize portions,"Current portions too large - 20% waste. Reduce by 15% = $200/month savings.",medium,inventory,7.5
+Fries,Bundle deals,Fries + drink combo increases average order value by 28%.,high,orders,9.1
+Spicy Chicken,Add combo option,"28% of customers order chicken + sides separately. Create combo for $2 upcharge.",high,orders,8.7
+Spicy Chicken,Reduce cook time,Average 13 min. Optimize to 9 min for faster turnaround.,medium,operations,7.4
+Buffalo Wings,Promote more heavily,High margin (62%) but only 8% of orders. Increase menu visibility.,high,orders,9.3
+Buffalo Wings,Add variety pack,"Offer mixed flavors (BBQ, Teriyaki, Hot) for larger groups.",medium,reviews,7.9
+Veggie Wrap,Market to lunch crowd,High health-conscious lunch demand. Partner with local offices.,high,demographics,8.6
+Veggie Wrap,Add vegan cheese option,"12 customer requests in reviews. Low cost addition (+$0.75).",medium,reviews,7.2
+Combo Meal,Customize options,"Allow drink/side swaps. 34% of customers ask for modifications.",high,orders,9.0
+Combo Meal,Upsize promotion,"Offer upsize for $2. Average acceptance rate: 45%.",medium,orders,8.1
+

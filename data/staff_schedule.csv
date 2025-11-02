@@ -1,0 +1,14 @@
+date,staff_name,role,shift_start,shift_end,hourly_rate,status
+2025-11-02,Alice Johnson,Cook,10:00,18:00,22.00,active
+2025-11-02,Bob Martinez,Cook,12:00,20:00,22.00,active
+2025-11-02,Carol Smith,Cashier,10:00,18:00,16.50,active
+2025-11-02,Dave Wilson,Cashier,16:00,22:00,16.50,active
+2025-11-03,Alice Johnson,Cook,10:00,18:00,22.00,scheduled
+2025-11-03,Bob Martinez,Cook,12:00,20:00,22.00,scheduled
+2025-11-03,Emma Davis,Cook,17:00,22:00,22.00,scheduled
+2025-11-03,Carol Smith,Cashier,10:00,18:00,16.50,scheduled
+2025-11-03,Dave Wilson,Cashier,16:00,22:00,16.50,scheduled
+2025-11-04,Alice Johnson,Cook,10:00,18:00,22.00,scheduled
+2025-11-04,Bob Martinez,Cook,14:00,22:00,22.00,scheduled
+2025-11-04,Carol Smith,Cashier,10:00,18:00,16.50,scheduled
+

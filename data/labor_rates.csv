@@ -1,0 +1,7 @@
+role,hourly_rate,benefits_pct,total_cost_per_hour,shift_length_hours
+Cook,22.00,18,25.96,8
+Cashier,16.50,18,19.47,8
+Prep Cook,20.00,18,23.60,8
+Manager,28.00,22,34.16,8
+Delivery Driver,15.00,15,17.25,6
+

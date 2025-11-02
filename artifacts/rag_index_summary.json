@@ -1,0 +1,9 @@
+{
+  "backend": "Captain (OpenAI SDK)",
+  "endpoint": "https://api.runcaptain.com/v1",
+  "model": "captain-voyager-latest",
+  "collection_id": "ctx_brew_charcoal_eats_us",
+  "collection_name": "brew_charcoal_eats_us",
+  "org_id": "019a43c1-e932-d3e3-577b-ec35b74dea81",
+  "status": "operational"
+}

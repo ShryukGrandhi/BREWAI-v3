@@ -1,0 +1,137 @@
+{
+  "city": "San Francisco, CA",
+  "locations": [
+    {
+      "name": "Marina District",
+      "lat": 37.803,
+      "lng": -122.436,
+      "competitors_count": 1,
+      "businesses_count": 20,
+      "competition_score": 0.95,
+      "traffic_score": 0.4,
+      "income_score": 0.9,
+      "roi_score": 0.715,
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=37.803,-122.436"
+    },
+    {
+      "name": "Financial District",
+      "lat": 37.7946,
+      "lng": -122.3999,
+      "competitors_count": 3,
+      "businesses_count": 20,
+      "competition_score": 0.85,
+      "traffic_score": 0.4,
+      "income_score": 0.9,
+      "roi_score": 0.685,
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=37.7946,-122.3999"
+    },
+    {
+      "name": "Embarcadero",
+      "lat": 37.7955,
+      "lng": -122.3937,
+      "competitors_count": 4,
+      "businesses_count": 20,
+      "competition_score": 0.8,
+      "traffic_score": 0.4,
+      "income_score": 0.9,
+      "roi_score": 0.67,
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=37.7955,-122.3937"
+    },
+    {
+      "name": "Castro District",
+      "lat": 37.7609,
+      "lng": -122.435,
+      "competitors_count": 1,
+      "businesses_count": 20,
+      "competition_score": 0.95,
+      "traffic_score": 0.4,
+      "income_score": 0.7,
+      "roi_score": 0.655,
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=37.7609,-122.435"
+    },
+    {
+      "name": "Haight-Ashbury",
+      "lat": 37.7693,
+      "lng": -122.4482,
+      "competitors_count": 1,
+      "businesses_count": 20,
+      "competition_score": 0.95,
+      "traffic_score": 0.4,
+      "income_score": 0.5,
+      "roi_score": 0.595,
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=37.7693,-122.4482"
+    },
+    {
+      "name": "Hayes Valley",
+      "lat": 37.7749,
+      "lng": -122.4268,
+      "competitors_count": 6,
+      "businesses_count": 20,
+      "competition_score": 0.7,
+      "traffic_score": 0.4,
+      "income_score": 0.7,
+      "roi_score": 0.58,
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=37.7749,-122.4268"
+    },
+    {
+      "name": "North Beach",
+      "lat": 37.8006,
+      "lng": -122.4103,
+      "competitors_count": 6,
+      "businesses_count": 20,
+      "competition_score": 0.7,
+      "traffic_score": 0.4,
+      "income_score": 0.7,
+      "roi_score": 0.58,
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=37.8006,-122.4103"
+    },
+    {
+      "name": "Nob Hill",
+      "lat": 37.7927,
+      "lng": -122.4145,
+      "competitors_count": 11,
+      "businesses_count": 20,
+      "competition_score": 0.45,
+      "traffic_score": 0.4,
+      "income_score": 0.9,
+      "roi_score": 0.565,
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=37.7927,-122.4145"
+    },
+    {
+      "name": "SoMa (South of Market)",
+      "lat": 37.7749,
+      "lng": -122.4194,
+      "competitors_count": 8,
+      "businesses_count": 20,
+      "competition_score": 0.6,
+      "traffic_score": 0.4,
+      "income_score": 0.7,
+      "roi_score": 0.55,
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=37.7749,-122.4194"
+    },
+    {
+      "name": "Mission District",
+      "lat": 37.7599,
+      "lng": -122.4148,
+      "competitors_count": 6,
+      "businesses_count": 20,
+      "competition_score": 0.7,
+      "traffic_score": 0.4,
+      "income_score": 0.5,
+      "roi_score": 0.52,
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=37.7599,-122.4148"
+    }
+  ],
+  "top_location": {
+    "name": "Marina District",
+    "lat": 37.803,
+    "lng": -122.436,
+    "competitors_count": 1,
+    "businesses_count": 20,
+    "competition_score": 0.95,
+    "traffic_score": 0.4,
+    "income_score": 0.9,
+    "roi_score": 0.715,
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=37.803,-122.436"
+  }
+}

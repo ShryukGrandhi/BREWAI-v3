@@ -1,0 +1,10 @@
+timestamp,event_type,description,status_icon,priority
+2025-11-02 09:05:00,operations,Morning prep completed,✅,normal
+2025-11-02 09:14:00,orders,First lunch order received,🔔,normal
+2025-11-02 09:20:00,weather,Weather forecast updated - Rain expected,☔,normal
+2025-11-02 09:25:00,forecast,LSTM model predicted peak at 6 PM,📈,normal
+2025-11-02 09:30:00,inventory,Low stock alert: Beef Patties (75% of par),⚠️,warning
+2025-11-02 09:45:00,orders,Large catering order confirmed for tomorrow,🎉,high
+2025-11-02 10:00:00,staff,Alice Johnson checked in on time,✅,normal
+2025-11-02 10:15:00,orders,Peak hour started - 42 orders/hour,📊,normal
+

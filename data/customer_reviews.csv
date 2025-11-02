@@ -1,0 +1,4 @@
+date,rating,review_text,sentiment,keywords,channel
+2025-11-01,5,Great food!,positive,great,ubereats
+2025-11-01,4,Good service,positive,good,ubereats
+2025-11-02,3,Average,neutral,average,ubereats

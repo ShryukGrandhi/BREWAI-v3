@@ -1,0 +1,16 @@
+date,day_of_week,temp_f,rain_chance,conditions,weather_factor
+2025-11-02,Saturday,70,0,Sunny,1.30
+2025-11-03,Sunday,55,40,Rain PM,1.10
+2025-11-04,Monday,62,0,Clear,1.00
+2025-11-05,Tuesday,58,20,Light rain AM,0.95
+2025-11-06,Wednesday,65,0,Sunny warm,1.05
+2025-11-07,Thursday,60,0,Clear,1.00
+2025-11-08,Friday,68,0,Perfect weather,1.15
+2025-11-09,Saturday,72,0,Sunny,1.30
+2025-11-10,Sunday,58,30,Cloudy,1.05
+2025-11-11,Monday,64,0,Clear,1.00
+2025-11-12,Tuesday,61,10,Partly cloudy,1.02
+2025-11-13,Wednesday,67,0,Sunny,1.08
+2025-11-14,Thursday,63,0,Clear,1.00
+2025-11-15,Friday,69,0,Perfect weekend start,1.15
+

@@ -1,0 +1,17 @@
+{
+  "question": "Why are we adding a cook tomorrow?",
+  "answer": "We are adding a cook tomorrow because there is a forecast for rain, which typically increases the number of delivery orders by 25-35%. The forecasted peak order volume is 46.3 orders per hour. The operations manual states that each cook can handle 25 orders per hour, so an additional cook is needed to manage the increased demand.",
+  "citations": [],
+  "context": {
+    "forecast_data": {
+      "peak_hour": 13,
+      "peak_orders": 46.3
+    },
+    "weather_data": {
+      "rain_hours": 0,
+      "avg_temp": 48.270833333333336
+    }
+  },
+  "conversation_id": "conv_570864",
+  "powered_by": "Captain RAG (OpenAI SDK)"
+}

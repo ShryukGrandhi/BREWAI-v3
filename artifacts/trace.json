@@ -1,0 +1,734 @@
+[
+  {
+    "timestamp": "2025-11-02T04:50:15.994215",
+    "agent": "KnowledgeMapAgent",
+    "action": "Building knowledge graph",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {
+      "tenant_id": "charcoal_eats_us"
+    }
+  },
+  {
+    "timestamp": "2025-11-02T04:50:15.996080",
+    "agent": "KnowledgeMapAgent",
+    "action": "Knowledge graph built",
+    "result": "Nodes: 6, Edges: 5",
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {
+      "nodes": 6,
+      "edges": 5
+    }
+  },
+  {
+    "timestamp": "2025-11-02T05:18:05.831010",
+    "agent": "GeoAgent",
+    "action": "Identifying candidate locations",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {
+      "city": "San Francisco, CA"
+    }
+  },
+  {
+    "timestamp": "2025-11-02T05:18:05.831725",
+    "agent": "GeoAgent",
+    "action": "Analyzing locations",
+    "result": "Evaluating 10 candidates",
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T05:18:07.271851",
+    "agent": "GeoAgent",
+    "action": "Analyzed: Marina District",
+    "result": "ROI Score: 0.71",
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {
+      "name": "Marina District",
+      "lat": 37.803,
+      "lng": -122.436,
+      "competitors_count": 1,
+      "businesses_count": 20,
+      "competition_score": 0.95,
+      "traffic_score": 0.4,
+      "income_score": 0.9,
+      "roi_score": 0.715,
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=37.803,-122.436"
+    }
+  },
+  {
+    "timestamp": "2025-11-02T05:18:08.768769",
+    "agent": "GeoAgent",
+    "action": "Analyzed: Mission District",
+    "result": "ROI Score: 0.52",
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {
+      "name": "Mission District",
+      "lat": 37.7599,
+      "lng": -122.4148,
+      "competitors_count": 6,
+      "businesses_count": 20,
+      "competition_score": 0.7,
+      "traffic_score": 0.4,
+      "income_score": 0.5,
+      "roi_score": 0.52,
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=37.7599,-122.4148"
+    }
+  },
+  {
+    "timestamp": "2025-11-02T05:18:11.528826",
+    "agent": "GeoAgent",
+    "action": "Analyzed: SoMa (South of Market)",
+    "result": "ROI Score: 0.55",
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {
+      "name": "SoMa (South of Market)",
+      "lat": 37.7749,
+      "lng": -122.4194,
+      "competitors_count": 8,
+      "businesses_count": 20,
+      "competition_score": 0.6,
+      "traffic_score": 0.4,
+      "income_score": 0.7,
+      "roi_score": 0.55,
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=37.7749,-122.4194"
+    }
+  },
+  {
+    "timestamp": "2025-11-02T05:18:12.942062",
+    "agent": "GeoAgent",
+    "action": "Analyzed: Financial District",
+    "result": "ROI Score: 0.69",
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {
+      "name": "Financial District",
+      "lat": 37.7946,
+      "lng": -122.3999,
+      "competitors_count": 3,
+      "businesses_count": 20,
+      "competition_score": 0.85,
+      "traffic_score": 0.4,
+      "income_score": 0.9,
+      "roi_score": 0.685,
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=37.7946,-122.3999"
+    }
+  },
+  {
+    "timestamp": "2025-11-02T05:18:14.122748",
+    "agent": "GeoAgent",
+    "action": "Analyzed: Hayes Valley",
+    "result": "ROI Score: 0.58",
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {
+      "name": "Hayes Valley",
+      "lat": 37.7749,
+      "lng": -122.4268,
+      "competitors_count": 6,
+      "businesses_count": 20,
+      "competition_score": 0.7,
+      "traffic_score": 0.4,
+      "income_score": 0.7,
+      "roi_score": 0.58,
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=37.7749,-122.4268"
+    }
+  },
+  {
+    "timestamp": "2025-11-02T05:18:15.434882",
+    "agent": "GeoAgent",
+    "action": "Analyzed: Nob Hill",
+    "result": "ROI Score: 0.56",
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {
+      "name": "Nob Hill",
+      "lat": 37.7927,
+      "lng": -122.4145,
+      "competitors_count": 11,
+      "businesses_count": 20,
+      "competition_score": 0.45,
+      "traffic_score": 0.4,
+      "income_score": 0.9,
+      "roi_score": 0.565,
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=37.7927,-122.4145"
+    }
+  },
+  {
+    "timestamp": "2025-11-02T05:18:16.781465",
+    "agent": "GeoAgent",
+    "action": "Analyzed: Castro District",
+    "result": "ROI Score: 0.66",
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {
+      "name": "Castro District",
+      "lat": 37.7609,
+      "lng": -122.435,
+      "competitors_count": 1,
+      "businesses_count": 20,
+      "competition_score": 0.95,
+      "traffic_score": 0.4,
+      "income_score": 0.7,
+      "roi_score": 0.655,
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=37.7609,-122.435"
+    }
+  },
+  {
+    "timestamp": "2025-11-02T05:18:18.479885",
+    "agent": "GeoAgent",
+    "action": "Analyzed: North Beach",
+    "result": "ROI Score: 0.58",
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {
+      "name": "North Beach",
+      "lat": 37.8006,
+      "lng": -122.4103,
+      "competitors_count": 6,
+      "businesses_count": 20,
+      "competition_score": 0.7,
+      "traffic_score": 0.4,
+      "income_score": 0.7,
+      "roi_score": 0.58,
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=37.8006,-122.4103"
+    }
+  },
+  {
+    "timestamp": "2025-11-02T05:18:19.640632",
+    "agent": "GeoAgent",
+    "action": "Analyzed: Embarcadero",
+    "result": "ROI Score: 0.67",
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {
+      "name": "Embarcadero",
+      "lat": 37.7955,
+      "lng": -122.3937,
+      "competitors_count": 4,
+      "businesses_count": 20,
+      "competition_score": 0.8,
+      "traffic_score": 0.4,
+      "income_score": 0.9,
+      "roi_score": 0.67,
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=37.7955,-122.3937"
+    }
+  },
+  {
+    "timestamp": "2025-11-02T05:18:20.889122",
+    "agent": "GeoAgent",
+    "action": "Analyzed: Haight-Ashbury",
+    "result": "ROI Score: 0.59",
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {
+      "name": "Haight-Ashbury",
+      "lat": 37.7693,
+      "lng": -122.4482,
+      "competitors_count": 1,
+      "businesses_count": 20,
+      "competition_score": 0.95,
+      "traffic_score": 0.4,
+      "income_score": 0.5,
+      "roi_score": 0.595,
+      "gmaps_url": "https://www.google.com/maps/search/?api=1&query=37.7693,-122.4482"
+    }
+  },
+  {
+    "timestamp": "2025-11-02T05:18:20.890065",
+    "agent": "GeoAgent",
+    "action": "Creating expansion map",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T05:18:20.908983",
+    "agent": "GeoAgent",
+    "action": "Expansion analysis complete",
+    "result": "Top location: Marina District (ROI: 0.71)",
+    "url": null,
+    "selector": null,
+    "artifacts": [
+      "artifacts/expansion_map.html",
+      "artifacts/expansion_map.json"
+    ],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T05:54:53.137850",
+    "agent": "MasterOrchestrator",
+    "action": "\ud83d\ude80 STARTING FULL LIVE PLAN",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T05:56:42.395977",
+    "agent": "MasterOrchestrator",
+    "action": "\ud83d\ude80 STARTING FULL LIVE PLAN",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T05:56:42.397392",
+    "agent": "DataAgent",
+    "action": "Opening browser tabs for review scraping",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T05:56:45.313218",
+    "agent": "MasterOrchestrator",
+    "action": "ERROR: 'charmap' codec can't encode characters in position 2-3: character maps to <undefined>",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:00:20.137786",
+    "agent": "MasterOrchestrator",
+    "action": "STARTING FULL LIVE PLAN",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:00:20.140728",
+    "agent": "DataAgent",
+    "action": "Opening browser tabs for review scraping",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:00:31.102816",
+    "agent": "MasterOrchestrator",
+    "action": "STARTING FULL LIVE PLAN",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:00:31.152532",
+    "agent": "DataAgent",
+    "action": "Opening browser tabs for review scraping",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:00:32.365049",
+    "agent": "MasterOrchestrator",
+    "action": "STARTING FULL LIVE PLAN",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:00:32.372180",
+    "agent": "DataAgent",
+    "action": "Opening browser tabs for review scraping",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:00:32.973571",
+    "agent": "MasterOrchestrator",
+    "action": "STARTING FULL LIVE PLAN",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:00:32.977683",
+    "agent": "DataAgent",
+    "action": "Opening browser tabs for review scraping",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:00:46.885747",
+    "agent": "DataAgent",
+    "action": "Opening Uber Eats Manager dashboard",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:00:46.888863",
+    "agent": "DemandAgent",
+    "action": "Calling live APIs",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:00:46.890777",
+    "agent": "DemandAgent",
+    "action": "Running LSTM predictions",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:00:46.893848",
+    "agent": "DataAgent",
+    "action": "Opening Uber Eats Manager dashboard",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:00:46.894604",
+    "agent": "DataAgent",
+    "action": "Opening Uber Eats Manager dashboard",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:00:46.896853",
+    "agent": "DataAgent",
+    "action": "Opening Uber Eats Manager dashboard",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:00:46.902127",
+    "agent": "DemandAgent",
+    "action": "Calling live APIs",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:00:46.902308",
+    "agent": "DemandAgent",
+    "action": "Calling live APIs",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:00:46.902980",
+    "agent": "DemandAgent",
+    "action": "Calling live APIs",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:00:46.909088",
+    "agent": "DemandAgent",
+    "action": "Running LSTM predictions",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:00:46.909191",
+    "agent": "DemandAgent",
+    "action": "Running LSTM predictions",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:00:46.909428",
+    "agent": "DemandAgent",
+    "action": "Running LSTM predictions",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:01:41.747002",
+    "agent": "StaffingAgent",
+    "action": "Creating shift tasks in Asana",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:01:41.762710",
+    "agent": "StaffingAgent",
+    "action": "Creating shift tasks in Asana",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:01:41.774042",
+    "agent": "InventoryAgent",
+    "action": "Populating supplier form",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:01:41.776358",
+    "agent": "StaffingAgent",
+    "action": "Creating shift tasks in Asana",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:01:41.778949",
+    "agent": "InventoryAgent",
+    "action": "Populating supplier form",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:01:41.789614",
+    "agent": "StaffingAgent",
+    "action": "Creating shift tasks in Asana",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:01:41.800283",
+    "agent": "ExpansionAgent",
+    "action": "Analyzing SF neighborhoods",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:01:41.800626",
+    "agent": "InventoryAgent",
+    "action": "Populating supplier form",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:01:41.800849",
+    "agent": "ExpansionAgent",
+    "action": "Analyzing SF neighborhoods",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:01:41.800963",
+    "agent": "InventoryAgent",
+    "action": "Populating supplier form",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:01:41.812121",
+    "agent": "ExpansionAgent",
+    "action": "Analyzing SF neighborhoods",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:01:41.812278",
+    "agent": "AnalystAgent",
+    "action": "Answering: Why add a cook tomorrow?",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:01:41.812466",
+    "agent": "AnalystAgent",
+    "action": "Answering: Why add a cook tomorrow?",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:01:41.823806",
+    "agent": "ExpansionAgent",
+    "action": "Analyzing SF neighborhoods",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:01:41.823931",
+    "agent": "VoiceAgent",
+    "action": "Generating voice summary",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:01:41.825037",
+    "agent": "AnalystAgent",
+    "action": "Answering: Why add a cook tomorrow?",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:01:41.831015",
+    "agent": "VoiceAgent",
+    "action": "Generating voice summary",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:01:41.838322",
+    "agent": "AnalystAgent",
+    "action": "Answering: Why add a cook tomorrow?",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:01:41.842096",
+    "agent": "VoiceAgent",
+    "action": "Generating voice summary",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T07:01:41.847260",
+    "agent": "VoiceAgent",
+    "action": "Generating voice summary",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {}
+  },
+  {
+    "timestamp": "2025-11-02T08:59:02.831760",
+    "agent": "ComplianceAgent",
+    "action": "Initializing Nivara secure client",
+    "result": null,
+    "url": null,
+    "selector": null,
+    "artifacts": [],
+    "metadata": {
+      "tenant_id": "charcoal_eats_us"
+    }
+  }
+]

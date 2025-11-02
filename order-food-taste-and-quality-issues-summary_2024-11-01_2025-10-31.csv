@@ -1,0 +1,15 @@
+Period,Month,Total Food taste & quality issues orders,Orders with food quality issue,Refunds paid for orders with food quality issue,Total refunds paid,Currency Code
+This period,2025-01-01,1,1,0,0,USD
+This period,2025-05-01,2,1,0,0,USD
+This period,2025-06-01,4,4,0,0,USD
+This period,2025-07-01,3,3,0,0,USD
+This period,2025-08-01,2,2,0,0,USD
+This period,2025-09-01,4,4,0,0,USD
+This period,2025-10-01,4,4,0,0,USD
+Last period,2023-12-01,1,1,0,0,USD
+Last period,2024-01-01,2,2,0,0,USD
+Last period,2024-04-01,2,2,0,0,USD
+Last period,2024-05-01,3,3,0,0,USD
+Last period,2024-06-01,1,1,4.94,4.94,USD
+Last period,2024-07-01,4,4,0,0,USD
+Last period,2024-09-01,1,1,0,0,USD
