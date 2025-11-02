@@ -10,6 +10,34 @@ st.markdown("""
 <style>
     .main { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); color: white; }
     h1, h2, h3 { color: white; }
+    .stButton button {
+        background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 8px;
+        padding: 12px 24px;
+        font-weight: 600;
+        border: none;
+        transition: all 0.3s ease;
+    }
+    .stButton button:hover {
+        background-image: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+    }
+    .chat-card {
+        background: linear-gradient(135deg, #1a1a2e 0%, #2a2a3e 100%);
+        padding: 25px;
+        border-radius: 15px;
+        border: 2px solid #667eea;
+        margin: 15px 0;
+    }
+    .stChatMessage {
+        background: #2a2a3e;
+        border-radius: 12px;
+        padding: 15px;
+        margin: 10px 0;
+        border: 1px solid #667eea;
+    }
     .voice-btn {
         background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
         color: white;
