@@ -284,19 +284,17 @@ Answer with specific data and details."""
                                 tts_api_key = os.getenv('GEMINI_TTS_API_KEY', 'AIzaSyBESaysiC5ZMNaZrLQcyuzAMefX40NBqUI')
                                 genai.configure(api_key=tts_api_key)
                                 
-                                # Correct TTS API call (Python equivalent of generateAudio)
-                                # Use the model with proper TTS configuration
-                                tts_model = genai.GenerativeModel('gemini-2.5-flash-preview-tts')
-                                
-                                # Generate content with audio response modality
-                                # Note: No response_modality param - TTS models handle this automatically
-                                tts_response = tts_model.generate_content(
-                                    answer,
-                                    generation_config=genai.types.GenerationConfig(
-                                        # TTS models automatically return audio
-                                        # No need for response_modalities parameter
-                                    )
+                                # Correct TTS API call for Gemini 2.5 Flash TTS
+                                # Must explicitly request AUDIO response modality
+                                tts_model = genai.GenerativeModel(
+                                    'gemini-2.5-flash-preview-tts',
+                                    generation_config={
+                                        'response_modalities': ['AUDIO']
+                                    }
                                 )
+                                
+                                # Generate audio from text (no TEXT modality!)
+                                tts_response = tts_model.generate_content(answer)
                                 
                                 # Extract Base64 audio data from response
                                 audio_generated = False
