@@ -10,34 +10,41 @@ st.set_page_config(page_title="Compliance", page_icon="🔐", layout="wide")
 
 st.markdown("""
 <style>
-    .main { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); color: white; }
-    h1, h2, h3 { color: white; }
+    /* React-style full-screen layout */
+    .main { 
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); 
+        color: white;
+        padding: 40px 60px !important;
+    }
+    .block-container {
+        padding: 0 !important;
+        max-width: 1800px !important;
+    }
+    h1 { 
+        color: white; 
+        font-size: 48px !important;
+        font-weight: 800 !important;
+    }
+    h2, h3 { color: white; }
     .stButton button {
         background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
+        color: white !important;
         border-radius: 8px;
-        padding: 12px 24px;
+        padding: 16px 32px;
         font-weight: 600;
-        border: none;
-        transition: all 0.3s ease;
+        font-size: 16px;
     }
     .stButton button:hover {
-        background-image: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
         transform: translateY(-2px);
-        box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
-    }
-    .report-card {
-        background: linear-gradient(135deg, #1a1a2e 0%, #2a2a3e 100%);
-        border: 2px solid #00ff88;
-        border-radius: 15px;
-        padding: 25px;
-        margin: 15px 0;
+        box-shadow: 0 8px 16px rgba(102, 126, 234, 0.5);
     }
     .stTextArea textarea {
-        background-color: #1a1a2e;
-        color: white;
-        border: 1px solid #667eea;
-        border-radius: 8px;
+        background: #1a1a2e !important;
+        color: white !important;
+        border: 2px solid #667eea !important;
+        border-radius: 12px !important;
+        padding: 20px !important;
+        font-size: 14px !important;
     }
 </style>
 """, unsafe_allow_html=True)

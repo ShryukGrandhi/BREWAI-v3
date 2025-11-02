@@ -10,35 +10,59 @@ st.set_page_config(page_title="Automations", page_icon="🤖", layout="wide")
 
 st.markdown("""
 <style>
-    .main { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); color: white; }
-    h1, h2, h3 { color: white; }
+    /* React-style full-screen layout */
+    .main {
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+        color: white;
+        padding: 40px 60px !important;
+    }
+    .block-container {
+        padding: 0 !important;
+        max-width: 1800px !important;
+    }
+    h1 { 
+        color: white; 
+        font-size: 48px !important;
+        font-weight: 800 !important;
+    }
+    h2, h3 { color: white; }
     div[data-testid="stButton"] > button {
         width: 100%;
         background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
+        color: white !important;
         border: none;
         border-radius: 12px;
-        padding: 16px 24px;
+        padding: 18px 32px;
         font-weight: 600;
+        font-size: 16px;
         transition: all 0.3s ease;
         box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
     }
     div[data-testid="stButton"] > button:hover {
         background-image: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
-    }
-    .automation-card {
-        background: linear-gradient(135deg, #1a1a2e 0%, #2a2a3e 100%);
-        padding: 25px;
-        border-radius: 15px;
-        border: 2px solid #667eea;
-        margin: 15px 0;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.6);
     }
     .stExpander {
-        background: #1a1a2e;
-        border: 1px solid #667eea;
-        border-radius: 12px;
+        background: linear-gradient(135deg, #1a1a2e 0%, #2a2a3e 100%);
+        border: 2px solid #667eea !important;
+        border-radius: 15px !important;
+        padding: 20px !important;
+        margin: 15px 0 !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    .stExpander:hover {
+        border-color: #764ba2 !important;
+        box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+    }
+    .stTextArea textarea {
+        background: #0a0a0a !important;
+        color: #00ff88 !important;
+        border: 2px solid #667eea !important;
+        border-radius: 12px !important;
+        font-family: 'Courier New', monospace !important;
+        font-size: 13px !important;
+        padding: 15px !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -53,9 +77,12 @@ if st.session_state.get('crisis_triggered', False) and not st.session_state.get(
     crisis = st.session_state.get('active_crisis')
     
     if crisis:
-        st.error(f"🚨 CRISIS: {crisis['title']}")
+        st.markdown("---")
+        st.markdown("# 🚨 CRISIS AUTO-RESPONSE ACTIVATED")
+        st.error(f"**CRISIS:** {crisis['title']}")
         st.warning(f"**Problem:** {crisis['description']}")
         st.markdown("### ⚡ AUTO-EXECUTING AUTOMATIONS...")
+        st.markdown(f"**Total Automations:** {len(crisis['automations'])}")
         
         from agents.automation_engine import AutomationEngine
         engine = AutomationEngine()
@@ -181,6 +208,7 @@ Compliance: NIVARA Secure Reports
             st.session_state.latest_crisis_report_path = report_path
             st.session_state.crisis_complete = True
             
+            st.balloons()
             st.success("✅ CRISIS RESOLVED!")
             st.markdown("### 📄 Crisis Report:")
             st.text_area("Full Report", crisis_report, height=400)
@@ -202,9 +230,27 @@ Compliance: NIVARA Secure Reports
                 except:
                     st.info("✅ Report saved locally (NIVARA in demo mode)")
             
+            # Add navigation buttons
             st.markdown("---")
-            if st.button("➡️ View in Compliance Page", type="primary"):
-                st.switch_page("pages/4_Compliance.py")
+            col_r1, col_r2, col_r3 = st.columns(3)
+            with col_r1:
+                if st.button("🏠 Return to Home", use_container_width=True, type="primary"):
+                    st.session_state.crisis_triggered = False
+                    st.session_state.crisis_complete = False
+                    st.switch_page("Home.py")
+            with col_r2:
+                if st.button("📋 View in Compliance", use_container_width=True):
+                    st.switch_page("pages/4_Compliance.py")
+            with col_r3:
+                if st.button("🔄 New Crisis", use_container_width=True):
+                    st.session_state.crisis_triggered = False
+                    st.session_state.crisis_complete = False
+                    st.rerun()
+        
+        # Stop execution here - don't show the manual automation buttons below
+        st.markdown("---")
+        st.info("💡 Crisis auto-resolution complete! Use navigation above or sidebar to continue.")
+        st.stop()  # This prevents the rest of the page from rendering
 
 st.markdown("---")
 

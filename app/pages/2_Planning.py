@@ -15,23 +15,72 @@ st.set_page_config(page_title="Planning", page_icon="📋", layout="wide")
 
 st.markdown("""
 <style>
-    .main { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); color: white; }
-    h1, h2, h3 { color: white; }
+    /* React-style full-screen layout */
+    .main { 
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); 
+        color: white;
+        padding: 40px 60px !important;
+    }
+    .block-container {
+        padding: 0 !important;
+        max-width: 1800px !important;
+    }
+    h1 { 
+        color: white; 
+        font-size: 48px !important;
+        font-weight: 800 !important;
+        margin-bottom: 15px !important;
+    }
+    h2 { 
+        color: white; 
+        font-size: 28px !important;
+        margin-bottom: 20px !important;
+    }
+    h3 { 
+        color: white; 
+        font-size: 20px !important;
+    }
     .stButton button {
         background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
+        color: white !important;
         border-radius: 8px;
-        padding: 12px 24px;
+        padding: 16px 32px;
         font-weight: 600;
         border: none;
+        font-size: 16px;
+        transition: all 0.3s ease;
+    }
+    .stButton button:hover {
+        background-image: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(102, 126, 234, 0.5);
     }
     .day-card {
         background: linear-gradient(135deg, #1a1a2e 0%, #2a2a3e 100%);
-        padding: 20px;
+        padding: 30px 25px;
         border-radius: 15px;
         border: 2px solid #667eea;
         margin: 10px 0;
         text-align: center;
+        min-height: 320px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+    }
+    .day-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 24px rgba(102, 126, 234, 0.4);
+        border-color: #764ba2;
+    }
+    .stMetric {
+        background: linear-gradient(135deg, #1a1a2e 0%, #2a2a3e 100%);
+        border: 2px solid #667eea;
+        border-radius: 15px;
+        padding: 25px 20px;
+        min-height: 140px;
+    }
+    .stMetric:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 16px rgba(102, 126, 234, 0.4);
     }
 </style>
 """, unsafe_allow_html=True)
