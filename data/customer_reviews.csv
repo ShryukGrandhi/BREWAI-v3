@@ -1,0 +1,87 @@
+date,rating,review_text,sentiment,keywords,channel,order_id
+2025-10-28,5,"Absolutely amazing burgers! Best I've had in NYC. The Classic Burger was perfectly cooked and juicy.",positive,"amazing,best,perfect",ubereats,ORD001
+2025-10-28,4,"Good food, quick service. Fries were crispy and hot.",positive,"good,quick,crispy",in_person,ORD002
+2025-10-28,5,"Buffalo wings are incredible! Perfect amount of sauce. Will order again.",positive,"incredible,perfect",doordash,ORD003
+2025-10-28,3,"Food was okay but delivery took forever. 35 minutes instead of promised 25.",neutral,"okay,slow delivery",ubereats,ORD005
+2025-10-28,5,"The Veggie Power Bowl is so fresh and healthy! Love the variety of vegetables.",positive,"fresh,healthy,love",pickup,ORD008
+2025-10-28,2,"Burger was cold when it arrived. Disappointed with the temperature.",negative,"cold,disappointed",doordash,ORD016
+2025-10-28,5,"Excellent combo meal! Great value for the price. Portions are generous.",positive,"excellent,value,generous",in_person,ORD024
+2025-10-28,4,"Spicy chicken sandwich has the perfect kick. Not too spicy, just right.",positive,"perfect,right amount",pickup,ORD025
+2025-10-28,5,"Best buffalo wings in the area! Sauce is perfectly balanced.",positive,"best,perfect,balanced",ubereats,ORD030
+2025-10-29,4,"Really good burgers. The bun was fresh and the toppings were quality.",positive,"good,fresh,quality",in_person,ORD035
+2025-10-29,5,"Love this place! Quick service and always consistent quality.",positive,"love,quick,consistent",pickup,ORD036
+2025-10-29,3,"Fries were a bit soggy today. Usually they're better.",neutral,"soggy,usually better",in_person,ORD040
+2025-10-29,5,"Grilled Chicken Salad is massive and so good! Worth every penny.",positive,"massive,good,worth",doordash,ORD041
+2025-10-29,4,"BBQ pulled pork sandwich is delicious. Meat is tender and flavorful.",positive,"delicious,tender,flavorful",ubereats,ORD044
+2025-10-29,5,"Combo meal is the way to go! Everything was hot and fresh.",positive,"hot,fresh,perfect",in_person,ORD050
+2025-10-29,2,"Order was missing the fries. Had to call to get a refund.",negative,"missing,refund",doordash,ORD048
+2025-10-29,5,"Fish tacos are surprisingly amazing! Fresh ingredients and great seasoning.",positive,"amazing,fresh,great",in_person,ORD051
+2025-10-29,4,"Good experience overall. Staff was friendly and helpful.",positive,"good,friendly,helpful",in_person,ORD053
+2025-10-29,5,"Buffalo wings are addictive! Can't stop ordering them.",positive,"addictive,can't stop",ubereats,ORD054
+2025-10-29,3,"Delivery was slow but food was good when it arrived.",neutral,"slow,good",doordash,ORD058
+2025-10-30,5,"Best burger spot in Manhattan! Always fresh, always delicious.",positive,"best,fresh,delicious",in_person,ORD065
+2025-10-30,4,"Spicy chicken sandwich lives up to the name. Great flavor!",positive,"great flavor,spicy",ubereats,ORD067
+2025-10-30,5,"Veggie bowl is packed with flavor. So many fresh vegetables!",positive,"packed,fresh",in_person,ORD069
+2025-10-30,4,"Wings are good but could use more sauce.",neutral,"good,needs more sauce",in_person,ORD070
+2025-10-30,5,"Fish tacos are restaurant quality! Can't believe this is fast food.",positive,"quality,can't believe",pickup,ORD071
+2025-10-30,3,"Burger was overcooked. Usually better.",neutral,"overcooked,usually better",in_person,ORD075
+2025-10-30,5,"BBQ sandwich is phenomenal! Meat falls apart perfectly.",positive,"phenomenal,perfect",in_person,ORD076
+2025-10-30,4,"Good portion sizes. Never leave hungry!",positive,"good,never hungry",pickup,ORD078
+2025-10-30,5,"Wings are the best! Crispy outside, juicy inside.",positive,"best,crispy,juicy",doordash,ORD080
+2025-10-30,2,"Package was torn and food was cold. Not acceptable.",negative,"torn,cold,not acceptable",ubereats,ORD083
+2025-10-30,5,"Loaded nachos are incredible! So much cheese and toppings.",positive,"incredible,so much",in_person,ORD085
+2025-10-30,4,"Salad is fresh and crisp. Dressing is delicious.",positive,"fresh,crisp,delicious",doordash,ORD086
+2025-10-30,5,"Perfect every single time. My go-to lunch spot!",positive,"perfect,go-to",in_person,ORD087
+2025-10-30,3,"Food is good but prices are a bit high.",neutral,"good,prices high",pickup,ORD090
+2025-10-31,5,"Best combo meal deal in the city! Highly recommend.",positive,"best,recommend",in_person,ORD098
+2025-10-31,4,"Wings are always consistent. Great quality.",positive,"consistent,quality",ubereats,ORD100
+2025-10-31,5,"Love the variety on the menu. Something for everyone!",positive,"love,variety",doordash,ORD101
+2025-10-31,4,"Veggie bowl is my healthy go-to. Always satisfying.",positive,"healthy,satisfying",in_person,ORD103
+2025-10-31,5,"BBQ pork is melt-in-your-mouth tender. Amazing!",positive,"tender,amazing",pickup,ORD105
+2025-10-31,2,"Waited 40 minutes for delivery. Food was cold.",negative,"waited,cold",doordash,ORD107
+2025-10-31,5,"Grilled chicken salad is huge and delicious!",positive,"huge,delicious",ubereats,ORD109
+2025-10-31,4,"Consistent quality. Never disappointed.",positive,"consistent,never disappointed",in_person,ORD110
+2025-10-31,5,"Fish tacos have become my weekly treat. So good!",positive,"weekly,so good",doordash,ORD114
+2025-10-31,3,"Burger was okay. Expected more for the price.",neutral,"okay,expected more",pickup,ORD117
+2025-10-31,5,"Loaded nachos are perfect for sharing. So filling!",positive,"perfect,filling",in_person,ORD118
+2025-10-31,4,"Wings are always crispy and flavorful.",positive,"crispy,flavorful",doordash,ORD119
+2025-10-31,5,"Best fast food in the neighborhood! Quality beats chains.",positive,"best,quality",in_person,ORD120
+2025-10-31,3,"Fries were cold today. Disappointing.",neutral,"cold,disappointing",ubereats,ORD125
+2025-11-01,5,"Classic burger never fails. Juicy and perfectly seasoned.",positive,"never fails,juicy,perfect",in_person,ORD131
+2025-11-01,4,"Wings are my favorite! Always order extra sauce.",positive,"favorite,always",ubereats,ORD133
+2025-11-01,5,"Combo meals are great value. Always leave satisfied.",positive,"value,satisfied",doordash,ORD134
+2025-11-01,3,"Delivery took longer than expected but food was good.",neutral,"longer,good",ubereats,ORD137
+2025-11-01,5,"Veggie bowl is so fresh! Can taste the quality ingredients.",positive,"fresh,quality",in_person,ORD136
+2025-11-01,4,"BBQ sandwich is messy but delicious. Worth it!",positive,"delicious,worth",ubereats,ORD142
+2025-11-01,5,"Best wings in NYC! I order them every week.",positive,"best,every week",in_person,ORD143
+2025-11-01,2,"Forgot my drink in the order. Had to request refund.",negative,"forgot,refund",pickup,ORD144
+2025-11-01,5,"Grilled chicken salad is my healthy addiction!",positive,"healthy,addiction",doordash,ORD146
+2025-11-01,4,"Spicy chicken has great heat level. Just right!",positive,"great,just right",ubereats,ORD148
+2025-11-01,5,"Fish tacos are restaurant-quality. Absolutely love them!",positive,"quality,love",pickup,ORD150
+2025-11-01,3,"Burger was good but bun was slightly stale.",neutral,"good,stale bun",in_person,ORD151
+2025-11-01,5,"Loaded nachos are amazing! Perfect for game day.",positive,"amazing,perfect",in_person,ORD151
+2025-11-01,4,"Consistent quality every time. Never disappointed.",positive,"consistent,never disappointed",doordash,ORD152
+2025-11-01,5,"Wings are absolutely addictive. Best sauce ever!",positive,"addictive,best",in_person,ORD152
+2025-11-01,5,"Veggie bowl is so flavorful! Love all the fresh ingredients.",positive,"flavorful,love,fresh",ubereats,ORD154
+2025-11-01,4,"Combo meal is filling and delicious. Great value!",positive,"filling,delicious,value",in_person,ORD155
+2025-11-01,5,"Best burgers in the area! Always perfectly cooked.",positive,"best,perfect",doordash,ORD157
+2025-11-01,3,"Fries were undersalted today. Usually better.",neutral,"undersalted,usually better",in_person,ORD158
+2025-11-02,5,"Buffalo wings are perfection! Crispy and saucy.",positive,"perfection,crispy,saucy",ubereats,ORD166
+2025-11-02,4,"Good food, quick service. Always reliable.",positive,"good,quick,reliable",in_person,ORD164
+2025-11-02,5,"Combo meals are the best deal. Always satisfied!",positive,"best deal,satisfied",doordash,ORD167
+2025-11-02,5,"Spicy chicken sandwich is incredible! Perfect spice level.",positive,"incredible,perfect",in_person,ORD168
+2025-11-02,4,"Veggie bowl is healthy and delicious. Win-win!",positive,"healthy,delicious",in_person,ORD169
+2025-11-02,5,"Classic burger is consistently excellent. My favorite!",positive,"consistent,excellent,favorite",ubereats,ORD170
+2025-11-02,3,"Delivery driver was late. Food was still warm though.",neutral,"late,still warm",doordash,ORD173
+2025-11-02,5,"Grilled chicken salad is massive! Great ingredients.",positive,"massive,great",ubereats,ORD175
+2025-11-02,4,"Buffalo wings never disappoint. Always crispy!",positive,"never disappoint,crispy",in_person,ORD176
+2025-11-02,5,"Fish tacos are the best! Fresh and flavorful.",positive,"best,fresh,flavorful",doordash,ORD179
+2025-11-02,4,"Spicy chicken has just the right amount of heat.",positive,"right amount,heat",ubereats,ORD181
+2025-11-02,5,"Loaded nachos are incredible! So much topping!",positive,"incredible,so much",in_person,ORD184
+2025-11-02,5,"Wings are addictive! Order them every time.",positive,"addictive,every time",doordash,ORD185
+2025-11-02,4,"Classic burger is always solid. Never fails.",positive,"solid,never fails",in_person,ORD186
+2025-11-02,5,"Veggie bowl is my healthy obsession. So good!",positive,"obsession,so good",ubereats,ORD187
+2025-11-02,5,"Best combo deal in the city! Always satisfied.",positive,"best,satisfied",in_person,ORD188
+2025-11-02,4,"Spicy chicken sandwich is flavorful and juicy.",positive,"flavorful,juicy",pickup,ORD189
+2025-11-02,5,"Buffalo wings are the best! Perfectly sauced.",positive,"best,perfect",ubereats,ORD192
+2025-11-02,5,"Combo meals are my go-to. Never disappoints!",positive,"go-to,never disappoints",in_person,ORD193

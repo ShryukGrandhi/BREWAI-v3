@@ -1,0 +1,96 @@
+{
+  "nodes": [
+    {
+      "id": "Charcoal Eats US",
+      "type": "restaurant",
+      "cluster": "CENTER",
+      "color": "#FF6B35",
+      "size": 50,
+      "title": "Central Hub - All decisions connect here",
+      "shape": "star"
+    },
+    {
+      "id": "Rain 🌧️",
+      "type": "condition",
+      "cluster": "CONDITIONS",
+      "color": "#FCD34D",
+      "size": 30,
+      "title": "Rain expected 3 hours",
+      "impact_score": 0.45,
+      "confidence": 0.9
+    },
+    {
+      "id": "Delivery Surge +45%",
+      "type": "effect",
+      "cluster": "CONDITIONS",
+      "color": "#FBBF24",
+      "size": 25,
+      "title": "Rain drives delivery orders up 45%"
+    },
+    {
+      "id": "🍗 Wings",
+      "type": "menu",
+      "cluster": "MENU",
+      "color": "#10B981",
+      "size": 25,
+      "title": "Signature item"
+    },
+    {
+      "id": "🍟 Fries",
+      "type": "menu",
+      "cluster": "MENU",
+      "color": "#10B981",
+      "size": 25,
+      "title": "Popular side"
+    },
+    {
+      "id": "🍔 Combo Meal",
+      "type": "menu",
+      "cluster": "MENU",
+      "color": "#10B981",
+      "size": 25,
+      "title": "Best value"
+    }
+  ],
+  "edges": [
+    {
+      "source": "Charcoal Eats US",
+      "target": "Rain 🌧️",
+      "relationship": "observes",
+      "weight": 0.25,
+      "width": 1
+    },
+    {
+      "source": "Charcoal Eats US",
+      "target": "🍗 Wings",
+      "relationship": "serves",
+      "weight": 0.25,
+      "width": 1
+    },
+    {
+      "source": "Charcoal Eats US",
+      "target": "🍟 Fries",
+      "relationship": "serves",
+      "weight": 0.25,
+      "width": 1
+    },
+    {
+      "source": "Charcoal Eats US",
+      "target": "🍔 Combo Meal",
+      "relationship": "serves",
+      "weight": 0.25,
+      "width": 1
+    },
+    {
+      "source": "Rain 🌧️",
+      "target": "Delivery Surge +45%",
+      "relationship": "causes",
+      "confidence": 0.9,
+      "impact": 0.45,
+      "weight": 0.405,
+      "width": 2
+    }
+  ],
+  "tenant_id": "charcoal_eats_us",
+  "generated_at": "2025-11-02T04:50:15.995389"
+}

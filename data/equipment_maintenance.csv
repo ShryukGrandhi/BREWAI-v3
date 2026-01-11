@@ -1,0 +1,13 @@
+equipment_name,location,last_service_date,next_service_due,hours_used,service_interval_hours,status,technician,notes
+Commercial Fryer #1,Kitchen Station 1,2025-10-15,2025-11-15,240,720,good,Mike's Restaurant Equipment,Oil changed
+Commercial Fryer #2,Kitchen Station 2,2025-10-18,2025-11-18,220,720,good,Mike's Restaurant Equipment,Filter cleaned
+Grill Station,Kitchen Main,2025-10-10,2025-11-10,280,720,needs_service,Mike's Restaurant Equipment,Due for cleaning
+Walk-in Refrigerator,Back Kitchen,2025-09-28,2025-10-28,720,720,overdue,CoolTech HVAC,Urgent - temp fluctuating
+Freezer Unit,Back Kitchen,2025-10-05,2025-11-05,650,720,good,CoolTech HVAC,Working well
+Ice Machine,Front Counter,2025-10-22,2025-11-22,180,720,good,CoolTech HVAC,Recently serviced
+Dishwasher,Kitchen Back,2025-10-20,2025-11-20,200,720,good,Mike's Restaurant Equipment,New filters installed
+Exhaust Hood,Above Grill,2025-09-15,2025-10-15,840,720,overdue,Fire Safety Inc,Filter replacement needed
+POS System,Front Counter,2025-10-25,2025-12-25,150,1440,good,Square Support,Software updated
+Oven,Kitchen Main,2025-10-12,2025-11-12,260,720,good,Mike's Restaurant Equipment,Calibrated
+Microwave,Kitchen Prep,2025-10-08,2025-11-08,300,720,good,Mike's Restaurant Equipment,Working well
+

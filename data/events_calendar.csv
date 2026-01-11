@@ -1,0 +1,16 @@
+date,day_of_week,event_name,event_type,expected_impact,traffic_factor
+2025-11-02,Saturday,College game day nearby,Sports,High,1.25
+2025-11-03,Sunday,None,None,None,1.00
+2025-11-04,Monday,None,None,None,1.00
+2025-11-05,Tuesday,Office lunch rush (nearby event),Corporate,Medium,1.12
+2025-11-06,Wednesday,None,None,None,1.00
+2025-11-07,Thursday,None,None,None,1.00
+2025-11-08,Friday,Happy hour crowd,Social,High,1.18
+2025-11-09,Saturday,Street festival,Community,Very High,1.35
+2025-11-10,Sunday,Farmers market,Community,Medium,1.15
+2025-11-11,Monday,Veterans Day,Holiday,Low,0.90
+2025-11-12,Tuesday,None,None,None,1.00
+2025-11-13,Wednesday,Concert at nearby venue,Entertainment,Medium,1.10
+2025-11-14,Thursday,None,None,None,1.00
+2025-11-15,Friday,Local sports playoff,Sports,High,1.22
+

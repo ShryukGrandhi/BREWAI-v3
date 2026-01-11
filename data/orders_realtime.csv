@@ -1,0 +1,197 @@
+timestamp,order_id,item,quantity,price,channel,customer_type,payment_method,prep_time_min,delivery_time_min,total_amount
+2025-10-28 08:15:00,ORD001,Classic Burger,2,12.99,in_person,regular,card,8,0,25.98
+2025-10-28 08:45:00,ORD002,French Fries,1,4.99,in_person,regular,cash,3,0,4.99
+2025-10-28 09:20:00,ORD003,Buffalo Wings,1,14.99,doordash,new,card,12,25,14.99
+2025-10-28 09:45:00,ORD004,Combo Meal,2,18.99,pickup,regular,card,11,0,37.98
+2025-10-28 10:10:00,ORD005,Spicy Chicken Sandwich,1,13.99,ubereats,regular,card,10,28,13.99
+2025-10-28 10:35:00,ORD006,Classic Burger,3,12.99,in_person,regular,card,9,0,38.97
+2025-10-28 11:00:00,ORD007,French Fries,2,4.99,in_person,new,cash,4,0,9.98
+2025-10-28 11:25:00,ORD008,Veggie Power Bowl,1,11.99,pickup,regular,card,8,0,11.99
+2025-10-28 11:50:00,ORD009,Combo Meal,1,18.99,doordash,regular,card,13,32,18.99
+2025-10-28 12:15:00,ORD010,Classic Burger,2,12.99,in_person,regular,card,7,0,25.98
+2025-10-28 12:40:00,ORD011,Buffalo Wings,2,14.99,in_person,new,card,12,0,29.98
+2025-10-28 13:05:00,ORD012,Grilled Chicken Salad,1,12.49,ubereats,regular,card,9,35,12.49
+2025-10-28 13:30:00,ORD013,French Fries,3,4.99,in_person,regular,cash,4,0,14.97
+2025-10-28 13:55:00,ORD014,Combo Meal,2,18.99,pickup,regular,card,11,0,37.98
+2025-10-28 14:20:00,ORD015,Spicy Chicken Sandwich,1,13.99,in_person,regular,card,9,0,13.99
+2025-10-28 14:45:00,ORD016,Classic Burger,1,12.99,doordash,new,card,12,28,12.99
+2025-10-28 15:10:00,ORD017,Veggie Power Bowl,2,11.99,in_person,regular,cash,7,0,23.98
+2025-10-28 15:35:00,ORD018,BBQ Pulled Pork Sandwich,1,13.49,in_person,regular,card,11,0,13.49
+2025-10-28 16:00:00,ORD019,Classic Burger,2,12.99,pickup,regular,card,8,0,25.98
+2025-10-28 16:25:00,ORD020,French Fries,1,4.99,in_person,new,cash,3,0,4.99
+2025-10-28 16:50:00,ORD021,Buffalo Wings,3,14.99,ubereats,regular,card,13,30,44.97
+2025-10-28 17:15:00,ORD022,Classic Burger,4,12.99,in_person,regular,card,15,0,51.96
+2025-10-28 17:40:00,ORD023,Spicy Chicken Sandwich,2,13.99,doordash,regular,card,10,26,27.98
+2025-10-28 18:05:00,ORD024,Combo Meal,3,18.99,in_person,regular,card,12,0,56.97
+2025-10-28 18:30:00,ORD025,Fish Tacos,2,12.99,pickup,new,card,9,0,25.98
+2025-10-28 18:55:00,ORD026,Veggie Power Bowl,1,11.99,in_person,regular,cash,9,0,11.99
+2025-10-28 19:20:00,ORD027,French Fries,2,4.99,in_person,regular,card,3,0,9.98
+2025-10-28 19:45:00,ORD028,Classic Burger,3,12.99,ubereats,regular,card,11,33,38.97
+2025-10-28 20:10:00,ORD029,Combo Meal,2,18.99,doordash,regular,card,12,27,37.98
+2025-10-28 20:35:00,ORD030,Buffalo Wings,1,14.99,in_person,new,card,11,0,14.99
+2025-10-28 21:00:00,ORD031,Classic Burger,2,12.99,pickup,regular,card,9,0,25.98
+2025-10-28 21:25:00,ORD032,Loaded Nachos,1,10.99,in_person,regular,cash,8,0,10.99
+2025-10-29 08:20:00,ORD033,Spicy Chicken Sandwich,2,13.99,ubereats,new,card,11,28,27.98
+2025-10-29 08:45:00,ORD034,Combo Meal,1,18.99,doordash,regular,card,13,32,18.99
+2025-10-29 09:10:00,ORD035,Classic Burger,3,12.99,in_person,regular,card,8,0,38.97
+2025-10-29 09:35:00,ORD036,Veggie Power Bowl,1,11.99,pickup,regular,card,8,0,11.99
+2025-10-29 10:00:00,ORD037,Buffalo Wings,2,14.99,in_person,regular,card,12,0,29.98
+2025-10-29 10:25:00,ORD038,Combo Meal,2,18.99,ubereats,regular,card,14,35,37.98
+2025-10-29 10:50:00,ORD039,Classic Burger,1,12.99,in_person,new,card,9,0,12.99
+2025-10-29 11:15:00,ORD040,French Fries,3,4.99,in_person,regular,cash,4,0,14.97
+2025-10-29 11:40:00,ORD041,Grilled Chicken Salad,2,12.49,doordash,regular,card,10,25,24.98
+2025-10-29 12:05:00,ORD042,Combo Meal,3,18.99,pickup,regular,card,12,0,56.97
+2025-10-29 12:30:00,ORD043,Classic Burger,2,12.99,in_person,regular,card,8,0,25.98
+2025-10-29 12:55:00,ORD044,BBQ Pulled Pork Sandwich,1,13.49,ubereats,regular,card,8,30,13.49
+2025-10-29 13:20:00,ORD045,Buffalo Wings,1,14.99,in_person,new,card,12,0,14.99
+2025-10-29 13:45:00,ORD046,Combo Meal,2,18.99,doordash,regular,card,11,28,37.98
+2025-10-29 14:10:00,ORD047,Classic Burger,4,12.99,in_person,regular,card,10,0,51.96
+2025-10-29 14:35:00,ORD048,French Fries,2,4.99,pickup,regular,cash,3,0,9.98
+2025-10-29 15:00:00,ORD049,Spicy Chicken Sandwich,1,13.99,ubereats,regular,card,11,30,13.99
+2025-10-29 15:25:00,ORD050,Combo Meal,1,18.99,in_person,regular,card,13,0,18.99
+2025-10-29 15:50:00,ORD051,Fish Tacos,3,12.99,in_person,regular,card,10,0,38.97
+2025-10-29 16:15:00,ORD052,Veggie Power Bowl,2,11.99,doordash,new,card,9,27,23.98
+2025-10-29 16:40:00,ORD053,Classic Burger,3,12.99,in_person,regular,card,11,0,38.97
+2025-10-29 17:05:00,ORD054,Buffalo Wings,2,14.99,ubereats,regular,card,12,33,29.98
+2025-10-29 17:30:00,ORD055,Combo Meal,4,18.99,in_person,regular,card,15,0,75.96
+2025-10-29 17:55:00,ORD056,Loaded Nachos,2,10.99,pickup,regular,card,9,0,21.98
+2025-10-29 18:20:00,ORD057,Classic Burger,2,12.99,in_person,regular,card,8,0,25.98
+2025-10-29 18:45:00,ORD058,Spicy Chicken Sandwich,3,13.99,doordash,regular,card,11,29,41.97
+2025-10-29 19:10:00,ORD059,French Fries,2,4.99,in_person,regular,cash,4,0,9.98
+2025-10-29 19:35:00,ORD060,Combo Meal,2,18.99,ubereats,regular,card,12,31,37.98
+2025-10-29 20:00:00,ORD061,Classic Burger,1,12.99,in_person,new,card,9,0,12.99
+2025-10-29 20:25:00,ORD062,Buffalo Wings,2,14.99,pickup,regular,card,11,0,29.98
+2025-10-29 20:50:00,ORD063,Grilled Chicken Salad,1,12.49,in_person,regular,card,8,0,12.49
+2025-10-29 21:15:00,ORD064,Combo Meal,1,18.99,doordash,regular,card,13,30,18.99
+2025-10-30 08:10:00,ORD065,Classic Burger,2,12.99,in_person,regular,card,8,0,25.98
+2025-10-30 08:35:00,ORD066,French Fries,1,4.99,pickup,regular,cash,3,0,4.99
+2025-10-30 09:00:00,ORD067,Spicy Chicken Sandwich,2,13.99,ubereats,new,card,10,28,27.98
+2025-10-30 09:25:00,ORD068,Combo Meal,3,18.99,doordash,regular,card,14,32,56.97
+2025-10-30 09:50:00,ORD069,Veggie Power Bowl,1,11.99,in_person,regular,card,8,0,11.99
+2025-10-30 10:15:00,ORD070,Buffalo Wings,2,14.99,in_person,regular,card,12,0,29.98
+2025-10-30 10:40:00,ORD071,Classic Burger,4,12.99,ubereats,regular,card,15,35,51.96
+2025-10-30 11:05:00,ORD072,Fish Tacos,1,12.99,pickup,regular,card,9,0,12.99
+2025-10-30 11:30:00,ORD073,French Fries,3,4.99,in_person,new,cash,4,0,14.97
+2025-10-30 11:55:00,ORD074,Combo Meal,2,18.99,doordash,regular,card,12,28,37.98
+2025-10-30 12:20:00,ORD075,Classic Burger,3,12.99,in_person,regular,card,10,0,38.97
+2025-10-30 12:45:00,ORD076,BBQ Pulled Pork Sandwich,2,13.49,in_person,regular,card,11,0,26.98
+2025-10-30 13:10:00,ORD077,Spicy Chicken Sandwich,1,13.99,ubereats,regular,card,10,30,13.99
+2025-10-30 13:35:00,ORD078,Combo Meal,1,18.99,pickup,regular,card,11,0,18.99
+2025-10-30 14:00:00,ORD079,Classic Burger,2,12.99,in_person,regular,card,8,0,25.98
+2025-10-30 14:25:00,ORD080,Buffalo Wings,3,14.99,doordash,new,card,13,32,44.97
+2025-10-30 14:50:00,ORD081,Veggie Power Bowl,1,11.99,in_person,regular,cash,8,0,11.99
+2025-10-30 15:15:00,ORD082,French Fries,2,4.99,in_person,regular,card,3,0,9.98
+2025-10-30 15:40:00,ORD083,Combo Meal,2,18.99,ubereats,regular,card,12,34,37.98
+2025-10-30 16:05:00,ORD084,Classic Burger,1,12.99,pickup,regular,card,9,0,12.99
+2025-10-30 16:30:00,ORD085,Loaded Nachos,2,10.99,in_person,regular,card,9,0,21.98
+2025-10-30 16:55:00,ORD086,Grilled Chicken Salad,1,12.49,doordash,regular,card,8,27,12.49
+2025-10-30 17:20:00,ORD087,Classic Burger,5,12.99,in_person,regular,card,17,0,64.95
+2025-10-30 17:45:00,ORD088,Buffalo Wings,2,14.99,ubereats,regular,card,12,31,29.98
+2025-10-30 18:10:00,ORD089,Combo Meal,3,18.99,in_person,regular,card,14,0,56.97
+2025-10-30 18:35:00,ORD090,Spicy Chicken Sandwich,2,13.99,pickup,regular,card,10,0,27.98
+2025-10-30 19:00:00,ORD091,Classic Burger,2,12.99,doordash,regular,card,9,29,25.98
+2025-10-30 19:25:00,ORD092,French Fries,2,4.99,in_person,new,cash,4,0,9.98
+2025-10-30 19:50:00,ORD093,Combo Meal,2,18.99,ubereats,regular,card,12,33,37.98
+2025-10-30 20:15:00,ORD094,Fish Tacos,1,12.99,in_person,regular,card,9,0,12.99
+2025-10-30 20:40:00,ORD095,Buffalo Wings,2,14.99,pickup,regular,card,11,0,29.98
+2025-10-30 21:05:00,ORD096,Classic Burger,1,12.99,in_person,regular,card,8,0,12.99
+2025-10-30 21:30:00,ORD097,Combo Meal,1,18.99,doordash,regular,card,13,28,18.99
+2025-10-31 08:00:00,ORD098,Classic Burger,3,12.99,in_person,regular,card,11,0,38.97
+2025-10-31 08:25:00,ORD099,French Fries,2,4.99,pickup,regular,cash,3,0,9.98
+2025-10-31 08:50:00,ORD100,Buffalo Wings,1,14.99,ubereats,new,card,12,28,14.99
+2025-10-31 09:15:00,ORD101,Combo Meal,2,18.99,doordash,regular,card,13,32,37.98
+2025-10-31 09:40:00,ORD102,Spicy Chicken Sandwich,1,13.99,in_person,regular,card,10,0,13.99
+2025-10-31 10:05:00,ORD103,Veggie Power Bowl,2,11.99,in_person,regular,card,8,0,23.98
+2025-10-31 10:30:00,ORD104,Classic Burger,4,12.99,ubereats,regular,card,15,35,51.96
+2025-10-31 10:55:00,ORD105,BBQ Pulled Pork Sandwich,1,13.49,pickup,regular,card,11,0,13.49
+2025-10-31 11:20:00,ORD106,French Fries,3,4.99,in_person,new,cash,4,0,14.97
+2025-10-31 11:45:00,ORD107,Combo Meal,2,18.99,doordash,regular,card,12,29,37.98
+2025-10-31 12:10:00,ORD108,Classic Burger,2,12.99,in_person,regular,card,9,0,25.98
+2025-10-31 12:35:00,ORD109,Grilled Chicken Salad,2,12.49,ubereats,regular,card,9,33,24.98
+2025-10-31 13:00:00,ORD110,Buffalo Wings,1,14.99,in_person,regular,card,12,0,14.99
+2025-10-31 13:25:00,ORD111,Combo Meal,3,18.99,pickup,regular,card,14,0,56.97
+2025-10-31 13:50:00,ORD112,Classic Burger,1,12.99,in_person,regular,card,8,0,12.99
+2025-10-31 14:15:00,ORD113,Fish Tacos,2,12.99,doordash,regular,card,10,27,25.98
+2025-10-31 14:40:00,ORD114,French Fries,2,4.99,in_person,regular,cash,3,0,9.98
+2025-10-31 15:05:00,ORD115,Spicy Chicken Sandwich,2,13.99,ubereats,new,card,11,31,27.98
+2025-10-31 15:30:00,ORD116,Combo Meal,2,18.99,in_person,regular,card,12,0,37.98
+2025-10-31 15:55:00,ORD117,Classic Burger,3,12.99,pickup,regular,card,10,0,38.97
+2025-10-31 16:20:00,ORD118,Loaded Nachos,1,10.99,in_person,regular,card,8,0,10.99
+2025-10-31 16:45:00,ORD119,Buffalo Wings,3,14.99,doordash,regular,card,13,30,44.97
+2025-10-31 17:10:00,ORD120,Classic Burger,4,12.99,in_person,regular,card,15,0,51.96
+2025-10-31 17:35:00,ORD121,Veggie Power Bowl,1,11.99,ubereats,regular,card,8,32,11.99
+2025-10-31 18:00:00,ORD122,Combo Meal,4,18.99,in_person,regular,card,16,0,75.96
+2025-10-31 18:25:00,ORD123,Spicy Chicken Sandwich,2,13.99,pickup,regular,card,10,0,27.98
+2025-10-31 18:50:00,ORD124,Classic Burger,2,12.99,doordash,regular,card,9,28,25.98
+2025-10-31 19:15:00,ORD125,French Fries,3,4.99,in_person,new,cash,4,0,14.97
+2025-10-31 19:40:00,ORD126,Buffalo Wings,2,14.99,ubereats,regular,card,12,34,29.98
+2025-10-31 20:05:00,ORD127,Combo Meal,2,18.99,in_person,regular,card,12,0,37.98
+2025-10-31 20:30:00,ORD128,Classic Burger,1,12.99,pickup,regular,card,8,0,12.99
+2025-10-31 20:55:00,ORD129,Grilled Chicken Salad,1,12.49,in_person,regular,card,8,0,12.49
+2025-10-31 21:20:00,ORD130,Combo Meal,1,18.99,doordash,regular,card,13,27,18.99
+2025-11-01 08:15:00,ORD131,Classic Burger,2,12.99,in_person,regular,card,8,0,25.98
+2025-11-01 08:40:00,ORD132,French Fries,1,4.99,pickup,regular,cash,3,0,4.99
+2025-11-01 09:05:00,ORD133,Buffalo Wings,2,14.99,ubereats,new,card,12,29,29.98
+2025-11-01 09:30:00,ORD134,Combo Meal,3,18.99,doordash,regular,card,14,33,56.97
+2025-11-01 09:55:00,ORD135,Spicy Chicken Sandwich,1,13.99,in_person,regular,card,10,0,13.99
+2025-11-01 10:20:00,ORD136,Veggie Power Bowl,2,11.99,in_person,regular,card,8,0,23.98
+2025-11-01 10:45:00,ORD137,Classic Burger,5,12.99,ubereats,regular,card,17,36,64.95
+2025-11-01 11:10:00,ORD138,Fish Tacos,1,12.99,pickup,regular,card,9,0,12.99
+2025-11-01 11:35:00,ORD139,French Fries,2,4.99,in_person,new,cash,4,0,9.98
+2025-11-01 12:00:00,ORD140,Combo Meal,2,18.99,doordash,regular,card,12,28,37.98
+2025-11-01 12:25:00,ORD141,Classic Burger,3,12.99,in_person,regular,card,10,0,38.97
+2025-11-01 12:50:00,ORD142,BBQ Pulled Pork Sandwich,2,13.49,ubereats,regular,card,11,32,26.98
+2025-11-01 13:15:00,ORD143,Buffalo Wings,1,14.99,in_person,regular,card,12,0,14.99
+2025-11-01 13:40:00,ORD144,Combo Meal,2,18.99,pickup,regular,card,11,0,37.98
+2025-11-01 14:05:00,ORD145,Classic Burger,2,12.99,in_person,regular,card,8,0,25.98
+2025-11-01 14:30:00,ORD146,Grilled Chicken Salad,1,12.49,doordash,regular,card,9,27,12.49
+2025-11-01 14:55:00,ORD147,French Fries,3,4.99,in_person,regular,cash,4,0,14.97
+2025-11-01 15:20:00,ORD148,Spicy Chicken Sandwich,2,13.99,ubereats,new,card,11,31,27.98
+2025-11-01 15:45:00,ORD149,Combo Meal,1,18.99,in_person,regular,card,11,0,18.99
+2025-11-01 16:10:00,ORD150,Classic Burger,3,12.99,pickup,regular,card,10,0,38.97
+2025-11-01 16:35:00,ORD151,Loaded Nachos,2,10.99,in_person,regular,card,9,0,21.98
+2025-11-01 17:00:00,ORD152,Buffalo Wings,3,14.99,doordash,regular,card,13,29,44.97
+2025-11-01 17:25:00,ORD153,Classic Burger,4,12.99,in_person,regular,card,15,0,51.96
+2025-11-01 17:50:00,ORD154,Veggie Power Bowl,2,11.99,ubereats,regular,card,9,33,23.98
+2025-11-01 18:15:00,ORD155,Combo Meal,5,18.99,in_person,regular,card,18,0,94.95
+2025-11-01 18:40:00,ORD156,Spicy Chicken Sandwich,2,13.99,pickup,regular,card,10,0,27.98
+2025-11-01 19:05:00,ORD157,Classic Burger,3,12.99,doordash,regular,card,11,28,38.97
+2025-11-01 19:30:00,ORD158,French Fries,2,4.99,in_person,new,cash,4,0,9.98
+2025-11-01 19:55:00,ORD159,Buffalo Wings,2,14.99,ubereats,regular,card,12,35,29.98
+2025-11-01 20:20:00,ORD160,Combo Meal,2,18.99,in_person,regular,card,12,0,37.98
+2025-11-01 20:45:00,ORD161,Classic Burger,1,12.99,pickup,regular,card,8,0,12.99
+2025-11-01 21:10:00,ORD162,Fish Tacos,2,12.99,in_person,regular,card,10,0,25.98
+2025-11-01 21:35:00,ORD163,Combo Meal,1,18.99,doordash,regular,card,13,27,18.99
+2025-11-02 08:10:00,ORD164,Classic Burger,3,12.99,in_person,regular,card,11,0,38.97
+2025-11-02 08:35:00,ORD165,French Fries,2,4.99,pickup,regular,cash,3,0,9.98
+2025-11-02 09:00:00,ORD166,Buffalo Wings,1,14.99,ubereats,new,card,12,28,14.99
+2025-11-02 09:25:00,ORD167,Combo Meal,3,18.99,doordash,regular,card,14,32,56.97
+2025-11-02 09:50:00,ORD168,Spicy Chicken Sandwich,2,13.99,in_person,regular,card,10,0,27.98
+2025-11-02 10:15:00,ORD169,Veggie Power Bowl,1,11.99,in_person,regular,card,8,0,11.99
+2025-11-02 10:40:00,ORD170,Classic Burger,4,12.99,ubereats,regular,card,15,34,51.96
+2025-11-02 11:05:00,ORD171,BBQ Pulled Pork Sandwich,1,13.49,pickup,regular,card,11,0,13.49
+2025-11-02 11:30:00,ORD172,French Fries,3,4.99,in_person,new,cash,4,0,14.97
+2025-11-02 11:55:00,ORD173,Combo Meal,2,18.99,doordash,regular,card,12,29,37.98
+2025-11-02 12:20:00,ORD174,Classic Burger,2,12.99,in_person,regular,card,9,0,25.98
+2025-11-02 12:45:00,ORD175,Grilled Chicken Salad,2,12.49,ubereats,regular,card,9,32,24.98
+2025-11-02 13:10:00,ORD176,Buffalo Wings,2,14.99,in_person,regular,card,12,0,29.98
+2025-11-02 13:35:00,ORD177,Combo Meal,4,18.99,pickup,regular,card,16,0,75.96
+2025-11-02 14:00:00,ORD178,Classic Burger,1,12.99,in_person,regular,card,8,0,12.99
+2025-11-02 14:25:00,ORD179,Fish Tacos,2,12.99,doordash,regular,card,10,28,25.98
+2025-11-02 14:50:00,ORD180,French Fries,2,4.99,in_person,regular,cash,3,0,9.98
+2025-11-02 15:15:00,ORD181,Spicy Chicken Sandwich,1,13.99,ubereats,new,card,10,30,13.99
+2025-11-02 15:40:00,ORD182,Combo Meal,2,18.99,in_person,regular,card,12,0,37.98
+2025-11-02 16:05:00,ORD183,Classic Burger,3,12.99,pickup,regular,card,10,0,38.97
+2025-11-02 16:30:00,ORD184,Loaded Nachos,2,10.99,in_person,regular,card,9,0,21.98
+2025-11-02 16:55:00,ORD185,Buffalo Wings,3,14.99,doordash,regular,card,13,31,44.97
+2025-11-02 17:20:00,ORD186,Classic Burger,5,12.99,in_person,regular,card,17,0,64.95
+2025-11-02 17:45:00,ORD187,Veggie Power Bowl,1,11.99,ubereats,regular,card,8,33,11.99
+2025-11-02 18:10:00,ORD188,Combo Meal,4,18.99,in_person,regular,card,16,0,75.96
+2025-11-02 18:35:00,ORD189,Spicy Chicken Sandwich,3,13.99,pickup,regular,card,11,0,41.97
+2025-11-02 19:00:00,ORD190,Classic Burger,2,12.99,doordash,regular,card,9,27,25.98
+2025-11-02 19:25:00,ORD191,French Fries,3,4.99,in_person,new,cash,4,0,14.97
+2025-11-02 19:50:00,ORD192,Buffalo Wings,2,14.99,ubereats,regular,card,12,34,29.98
+2025-11-02 20:15:00,ORD193,Combo Meal,3,18.99,in_person,regular,card,14,0,56.97
+2025-11-02 20:40:00,ORD194,Classic Burger,1,12.99,pickup,regular,card,8,0,12.99
+2025-11-02 21:05:00,ORD195,Grilled Chicken Salad,1,12.49,in_person,regular,card,8,0,12.49
+2025-11-02 21:30:00,ORD196,Combo Meal,2,18.99,doordash,regular,card,12,28,37.98

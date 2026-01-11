@@ -1,0 +1,7 @@
+campaign_name,start_date,end_date,channel,target_audience,discount_percent,promo_code,orders_generated,revenue_generated,cost,roi,status
+Weekend Wings Special,2025-10-26,2025-10-27,social_media,all_customers,20,WINGS20,45,674.55,150.00,349.70,completed
+Lunch Combo Deal,2025-10-28,2025-11-01,email,regular_customers,15,LUNCH15,67,1273.33,100.00,1073.33,completed
+New Customer Welcome,2025-10-15,2025-11-02,app_notification,new_customers,25,WELCOME25,38,950.00,200.00,550.00,active
+Free Fries Friday,2025-11-01,2025-11-01,instagram,all_customers,0,FREEFRI,89,1780.00,445.00,890.00,completed
+Veggie Bowl Health Week,2025-10-28,2025-11-02,facebook,health_conscious,10,HEALTHY10,23,275.77,50.00,175.77,active
+

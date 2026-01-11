@@ -1,0 +1,80 @@
+date,staff_name,role,shift_start,shift_end,hourly_rate,status,hours,department
+2025-11-02,Alice Johnson,Head Cook,10:00,18:00,28.00,active,8,kitchen
+2025-11-02,Bob Martinez,Line Cook,12:00,20:00,22.00,active,8,kitchen
+2025-11-02,Carol Smith,Cashier,10:00,18:00,16.50,active,8,front_of_house
+2025-11-02,Dave Wilson,Cashier,16:00,22:00,16.50,active,6,front_of_house
+2025-11-02,Emma Davis,Prep Cook,08:00,16:00,20.00,active,8,kitchen
+2025-11-02,Frank Chen,Dishwasher,11:00,19:00,15.50,active,8,kitchen
+2025-11-02,Grace Lee,Manager,09:00,17:00,32.00,active,8,management
+2025-11-02,Henry Park,Delivery Driver,17:00,22:00,18.00,active,5,delivery
+2025-11-03,Alice Johnson,Head Cook,10:00,18:00,28.00,scheduled,8,kitchen
+2025-11-03,Bob Martinez,Line Cook,12:00,20:00,22.00,scheduled,8,kitchen
+2025-11-03,Emma Davis,Prep Cook,08:00,16:00,20.00,scheduled,8,kitchen
+2025-11-03,Carol Smith,Cashier,10:00,18:00,16.50,scheduled,8,front_of_house
+2025-11-03,Dave Wilson,Cashier,16:00,22:00,16.50,scheduled,6,front_of_house
+2025-11-03,Iris Rodriguez,Line Cook,17:00,22:00,22.00,scheduled,5,kitchen
+2025-11-03,Frank Chen,Dishwasher,12:00,20:00,15.50,scheduled,8,kitchen
+2025-11-03,Grace Lee,Manager,09:00,17:00,32.00,scheduled,8,management
+2025-11-03,Jake Thompson,Cashier,12:00,18:00,16.50,scheduled,6,front_of_house
+2025-11-04,Alice Johnson,Head Cook,10:00,18:00,28.00,scheduled,8,kitchen
+2025-11-04,Bob Martinez,Line Cook,14:00,22:00,22.00,scheduled,8,kitchen
+2025-11-04,Carol Smith,Cashier,10:00,18:00,16.50,scheduled,8,front_of_house
+2025-11-04,Emma Davis,Prep Cook,07:00,15:00,20.00,scheduled,8,kitchen
+2025-11-04,Frank Chen,Dishwasher,11:00,19:00,15.50,scheduled,8,kitchen
+2025-11-04,Grace Lee,Manager,10:00,18:00,32.00,scheduled,8,management
+2025-11-04,Henry Park,Delivery Driver,17:00,22:00,18.00,scheduled,5,delivery
+2025-11-05,Alice Johnson,Head Cook,10:00,18:00,28.00,scheduled,8,kitchen
+2025-11-05,Bob Martinez,Line Cook,12:00,20:00,22.00,scheduled,8,kitchen
+2025-11-05,Iris Rodriguez,Line Cook,16:00,22:00,22.00,scheduled,6,kitchen
+2025-11-05,Carol Smith,Cashier,10:00,18:00,16.50,scheduled,8,front_of_house
+2025-11-05,Dave Wilson,Cashier,15:00,22:00,16.50,scheduled,7,front_of_house
+2025-11-05,Emma Davis,Prep Cook,08:00,16:00,20.00,scheduled,8,kitchen
+2025-11-05,Frank Chen,Dishwasher,12:00,20:00,15.50,scheduled,8,kitchen
+2025-11-05,Grace Lee,Manager,09:00,17:00,32.00,scheduled,8,management
+2025-11-05,Jake Thompson,Cashier,11:00,19:00,16.50,scheduled,8,front_of_house
+2025-11-06,Alice Johnson,Head Cook,10:00,18:00,28.00,scheduled,8,kitchen
+2025-11-06,Bob Martinez,Line Cook,11:00,19:00,22.00,scheduled,8,kitchen
+2025-11-06,Iris Rodriguez,Line Cook,17:00,23:00,22.00,scheduled,6,kitchen
+2025-11-06,Carol Smith,Cashier,10:00,18:00,16.50,scheduled,8,front_of_house
+2025-11-06,Dave Wilson,Cashier,16:00,23:00,16.50,scheduled,7,front_of_house
+2025-11-06,Emma Davis,Prep Cook,08:00,16:00,20.00,scheduled,8,kitchen
+2025-11-06,Frank Chen,Dishwasher,11:00,19:00,15.50,scheduled,8,kitchen
+2025-11-06,Grace Lee,Manager,09:00,17:00,32.00,scheduled,8,management
+2025-11-06,Henry Park,Delivery Driver,17:00,23:00,18.00,scheduled,6,delivery
+2025-11-06,Jake Thompson,Cashier,12:00,20:00,16.50,scheduled,8,front_of_house
+2025-11-07,Alice Johnson,Head Cook,09:00,17:00,28.00,scheduled,8,kitchen
+2025-11-07,Bob Martinez,Line Cook,11:00,19:00,22.00,scheduled,8,kitchen
+2025-11-07,Iris Rodriguez,Line Cook,16:00,23:00,22.00,scheduled,7,kitchen
+2025-11-07,Carol Smith,Cashier,09:00,17:00,16.50,scheduled,8,front_of_house
+2025-11-07,Dave Wilson,Cashier,15:00,23:00,16.50,scheduled,8,front_of_house
+2025-11-07,Emma Davis,Prep Cook,07:00,15:00,20.00,scheduled,8,kitchen
+2025-11-07,Frank Chen,Dishwasher,10:00,18:00,15.50,scheduled,8,kitchen
+2025-11-07,Grace Lee,Manager,08:00,16:00,32.00,scheduled,8,management
+2025-11-07,Henry Park,Delivery Driver,16:00,23:00,18.00,scheduled,7,delivery
+2025-11-07,Jake Thompson,Cashier,11:00,19:00,16.50,scheduled,8,front_of_house
+2025-11-08,Alice Johnson,Head Cook,09:00,17:00,28.00,scheduled,8,kitchen
+2025-11-08,Bob Martinez,Line Cook,11:00,19:00,22.00,scheduled,8,kitchen
+2025-11-08,Iris Rodriguez,Line Cook,16:00,23:00,22.00,scheduled,7,kitchen
+2025-11-08,Carol Smith,Cashier,09:00,17:00,16.50,scheduled,8,front_of_house
+2025-11-08,Dave Wilson,Cashier,15:00,23:00,16.50,scheduled,8,front_of_house
+2025-11-08,Emma Davis,Prep Cook,07:00,15:00,20.00,scheduled,8,kitchen
+2025-11-08,Frank Chen,Dishwasher,10:00,18:00,15.50,scheduled,8,kitchen
+2025-11-08,Grace Lee,Manager,08:00,16:00,32.00,scheduled,8,management
+2025-11-08,Henry Park,Delivery Driver,16:00,23:00,18.00,scheduled,7,delivery
+2025-11-08,Jake Thompson,Cashier,11:00,19:00,16.50,scheduled,8,front_of_house
+2025-11-09,Alice Johnson,Head Cook,10:00,18:00,28.00,scheduled,8,kitchen
+2025-11-09,Bob Martinez,Line Cook,12:00,20:00,22.00,scheduled,8,kitchen
+2025-11-09,Emma Davis,Prep Cook,08:00,16:00,20.00,scheduled,8,kitchen
+2025-11-09,Carol Smith,Cashier,10:00,18:00,16.50,scheduled,8,front_of_house
+2025-11-09,Dave Wilson,Cashier,16:00,22:00,16.50,scheduled,6,front_of_house
+2025-11-09,Frank Chen,Dishwasher,11:00,19:00,15.50,scheduled,8,kitchen
+2025-11-09,Grace Lee,Manager,09:00,17:00,32.00,scheduled,8,management
+2025-11-09,Jake Thompson,Cashier,11:00,19:00,16.50,scheduled,8,front_of_house
+2025-11-10,Alice Johnson,Head Cook,10:00,18:00,28.00,scheduled,8,kitchen
+2025-11-10,Bob Martinez,Line Cook,12:00,20:00,22.00,scheduled,8,kitchen
+2025-11-10,Iris Rodriguez,Line Cook,17:00,22:00,22.00,scheduled,5,kitchen
+2025-11-10,Carol Smith,Cashier,10:00,18:00,16.50,scheduled,8,front_of_house
+2025-11-10,Dave Wilson,Cashier,16:00,22:00,16.50,scheduled,6,front_of_house
+2025-11-10,Emma Davis,Prep Cook,08:00,16:00,20.00,scheduled,8,kitchen
+2025-11-10,Frank Chen,Dishwasher,12:00,20:00,15.50,scheduled,8,kitchen
+2025-11-10,Grace Lee,Manager,09:00,17:00,32.00,scheduled,8,management

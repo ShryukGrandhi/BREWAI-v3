@@ -1,0 +1,22 @@
+order_date,supplier,item,quantity,unit,cost_per_unit,total_cost,delivery_date,status,order_id
+2025-10-27,US Foods,Beef Patties,200,lbs,4.50,900.00,2025-10-28,delivered,PO-1001
+2025-10-27,Sysco,Burger Buns,500,units,0.35,175.00,2025-10-28,delivered,PO-1002
+2025-10-28,Fresh Direct,Lettuce,20,heads,2.50,50.00,2025-10-29,delivered,PO-1003
+2025-10-28,Fresh Direct,Tomatoes,25,lbs,3.20,80.00,2025-10-29,delivered,PO-1004
+2025-10-28,US Foods,Chicken Wings,150,lbs,6.80,1020.00,2025-10-29,delivered,PO-1005
+2025-10-29,Sysco,Buffalo Sauce,5,gallons,18.00,90.00,2025-10-30,delivered,PO-1006
+2025-10-29,Sysco,Ketchup,6,gallons,12.00,72.00,2025-10-30,delivered,PO-1007
+2025-10-29,US Foods,French Fries,120,lbs,2.80,336.00,2025-10-30,delivered,PO-1008
+2025-10-30,Fresh Direct,Vegetable Mix,30,lbs,4.00,120.00,2025-10-31,delivered,PO-1009
+2025-10-30,Sysco,Tortillas,150,units,0.40,60.00,2025-10-31,delivered,PO-1010
+2025-10-31,US Foods,Beef Patties,250,lbs,4.50,1125.00,2025-11-01,delivered,PO-1011
+2025-10-31,Sysco,Burger Buns,600,units,0.35,210.00,2025-11-01,delivered,PO-1012
+2025-11-01,Fresh Direct,Lettuce,25,heads,2.50,62.50,2025-11-02,delivered,PO-1013
+2025-11-01,Fresh Direct,Tomatoes,30,lbs,3.20,96.00,2025-11-02,delivered,PO-1014
+2025-11-01,US Foods,Chicken Breasts,100,lbs,5.20,520.00,2025-11-02,delivered,PO-1015
+2025-11-01,US Foods,Chicken Wings,200,lbs,6.80,1360.00,2025-11-02,delivered,PO-1016
+2025-11-02,Sysco,BBQ Sauce,8,gallons,16.50,132.00,2025-11-03,pending,PO-1017
+2025-11-02,Fresh Direct,Avocados,30,units,1.80,54.00,2025-11-03,pending,PO-1018
+2025-11-02,Sysco,Shredded Cheese,40,lbs,5.20,208.00,2025-11-03,pending,PO-1019
+2025-11-02,US Foods,Pork Shoulder,60,lbs,5.80,348.00,2025-11-03,pending,PO-1020
+

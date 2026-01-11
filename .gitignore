@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Streamlit
+.streamlit/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Model files
+*.h5
+*.keras
+models/*.h5
+models/*.keras
+
+# Data (optional - comment out if you want to include CSV data)
+# *.csv
+
+# Artifacts
+artifacts/automations/*.txt
+artifacts/automations/*.json
+artifacts/crisis_reports/*.txt
+
+# Environment
+.env
+
+# Temp files
+*.tmp
+*.bak

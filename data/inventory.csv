@@ -1,0 +1,42 @@
+item_name,stock_level,reorder_point,unit,cost_per_unit,supplier,last_ordered,category,shelf_life_days
+Beef Patties,450,600,lbs,4.50,US Foods,2025-11-01,proteins,7
+Burger Buns,800,1000,units,0.35,Sysco,2025-11-01,bread,5
+Cheese Slices,600,800,units,0.25,US Foods,2025-10-31,dairy,14
+Lettuce,25,40,heads,2.50,Fresh Direct,2025-11-02,produce,7
+Tomatoes,30,50,lbs,3.20,Fresh Direct,2025-11-02,produce,5
+Onions,40,60,lbs,1.80,Fresh Direct,2025-11-01,produce,14
+Pickles,15,20,jars,8.50,Sysco,2025-10-30,condiments,180
+Ketchup,12,15,gallons,12.00,Sysco,2025-10-29,condiments,365
+Mayonnaise,10,15,gallons,14.50,Sysco,2025-10-29,condiments,180
+French Fries (Frozen),200,300,lbs,2.80,US Foods,2025-11-01,frozen,90
+Chicken Breasts,180,250,lbs,5.20,US Foods,2025-11-02,proteins,5
+Buffalo Sauce,8,12,gallons,18.00,Sysco,2025-10-30,sauces,180
+Tortillas,250,350,units,0.40,Sysco,2025-10-31,bread,7
+Vegetable Mix,40,60,lbs,4.00,Fresh Direct,2025-11-02,produce,7
+Cooking Oil,25,30,gallons,15.00,US Foods,2025-10-28,oils,365
+BBQ Sauce,14,20,gallons,16.50,Sysco,2025-11-01,sauces,180
+Chicken Wings,320,450,lbs,6.80,US Foods,2025-11-02,proteins,5
+Ranch Dressing,11,15,gallons,13.00,Sysco,2025-10-30,dressings,90
+Bacon Strips,85,120,lbs,7.50,US Foods,2025-11-01,proteins,14
+Avocados,45,60,units,1.80,Fresh Direct,2025-11-02,produce,3
+Sour Cream,18,25,gallons,11.00,Sysco,2025-10-31,dairy,30
+Jalapenos,22,30,lbs,3.50,Fresh Direct,2025-11-02,produce,7
+Shredded Cheese,65,90,lbs,5.20,Sysco,2025-11-01,dairy,21
+Black Beans,40,55,lbs,2.80,Sysco,2025-10-30,canned,365
+Rice,120,150,lbs,1.50,US Foods,2025-11-01,grains,365
+Salsa,16,22,gallons,9.50,Sysco,2025-10-31,sauces,90
+Guacamole,28,40,lbs,8.50,Fresh Direct,2025-11-02,produce,2
+Taco Shells,180,250,units,0.30,Sysco,2025-10-31,bread,60
+Pork Shoulder,95,130,lbs,5.80,US Foods,2025-11-01,proteins,7
+Coleslaw Mix,35,50,lbs,3.20,Fresh Direct,2025-11-02,produce,5
+Soft Drinks (Coke),240,300,cans,0.45,Pepsi Co,2025-10-30,beverages,270
+Soft Drinks (Sprite),200,280,cans,0.45,Pepsi Co,2025-10-30,beverages,270
+Iced Tea,18,25,gallons,6.50,Sysco,2025-11-01,beverages,14
+Lemonade,15,22,gallons,7.00,Sysco,2025-11-01,beverages,14
+Napkins,4500,6000,units,0.02,Sysco,2025-10-28,supplies,365
+Takeout Containers,2200,3000,units,0.35,Sysco,2025-10-29,supplies,365
+Plastic Utensils,3800,5000,sets,0.08,Sysco,2025-10-29,supplies,365
+Paper Bags,1800,2500,units,0.12,Sysco,2025-10-30,supplies,365
+Aluminum Foil,45,60,rolls,8.50,Sysco,2025-10-28,supplies,365
+Cleaning Supplies,28,40,units,15.00,Sysco,2025-10-27,cleaning,365
+Hand Sanitizer,32,45,bottles,4.50,Sysco,2025-10-29,cleaning,365

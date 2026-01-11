@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e6d68ccd80467147e06ef61513ab2fea {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e6d68ccd80467147e06ef61513ab2fea" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e6d68ccd80467147e06ef61513ab2fea = L.map(
+                "map_e6d68ccd80467147e06ef61513ab2fea",
+                {
+                    center: [37.78263, -122.41986],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e9fdb0515122a7fbffa9d8279fcd7716 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e9fdb0515122a7fbffa9d8279fcd7716.addTo(map_e6d68ccd80467147e06ef61513ab2fea);
+        
+    
+            var marker_c3022a0030bf25c4913977ec91891a48 = L.marker(
+                [37.803, -122.436],
+                {
+}
+            ).addTo(map_e6d68ccd80467147e06ef61513ab2fea);
+        
+    
+            var icon_9796b4d956bd64ec84450f76665a9507 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b69990bff64fe04ebf8d715e62cecbf0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e4c61c3805957a17f8143e87857f8d78 = $(`<div id="html_e4c61c3805957a17f8143e87857f8d78" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 250px;">                 <h4>Marina District</h4>                 <b>ROI Score:</b> 0.71<br>                 <b>Traffic:</b> 0.40<br>                 <b>Income:</b> 0.90<br>                 <b>Competition:</b> 0.95<br>                 <b>Competitors:</b> 1<br>                 <b>Nearby Businesses:</b> 20<br>                 <br>                 <a href="https://www.google.com/maps/search/?api=1&query=37.803,-122.436" target="_blank">Open in Google Maps</a>             </div>             </div>`)[0];
+                popup_b69990bff64fe04ebf8d715e62cecbf0.setContent(html_e4c61c3805957a17f8143e87857f8d78);
+            
+        
+
+        marker_c3022a0030bf25c4913977ec91891a48.bindPopup(popup_b69990bff64fe04ebf8d715e62cecbf0)
+        ;
+
+        
+    
+    
+            marker_c3022a0030bf25c4913977ec91891a48.bindTooltip(
+                `<div>
+                     Marina District (ROI: 0.71)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c3022a0030bf25c4913977ec91891a48.setIcon(icon_9796b4d956bd64ec84450f76665a9507);
+            
+    
+            var marker_fbf319c6964996e5032bc2b8801869c1 = L.marker(
+                [37.7946, -122.3999],
+                {
+}
+            ).addTo(map_e6d68ccd80467147e06ef61513ab2fea);
+        
+    
+            var icon_a79941c7fd86d3b46ec15c69ffccade2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1244cfaed2a29b514c76690ef63a30c4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d3b85add7a2604ce167b801c1d090ced = $(`<div id="html_d3b85add7a2604ce167b801c1d090ced" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 250px;">                 <h4>Financial District</h4>                 <b>ROI Score:</b> 0.69<br>                 <b>Traffic:</b> 0.40<br>                 <b>Income:</b> 0.90<br>                 <b>Competition:</b> 0.85<br>                 <b>Competitors:</b> 3<br>                 <b>Nearby Businesses:</b> 20<br>                 <br>                 <a href="https://www.google.com/maps/search/?api=1&query=37.7946,-122.3999" target="_blank">Open in Google Maps</a>             </div>             </div>`)[0];
+                popup_1244cfaed2a29b514c76690ef63a30c4.setContent(html_d3b85add7a2604ce167b801c1d090ced);
+            
+        
+
+        marker_fbf319c6964996e5032bc2b8801869c1.bindPopup(popup_1244cfaed2a29b514c76690ef63a30c4)
+        ;
+
+        
+    
+    
+            marker_fbf319c6964996e5032bc2b8801869c1.bindTooltip(
+                `<div>
+                     Financial District (ROI: 0.69)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fbf319c6964996e5032bc2b8801869c1.setIcon(icon_a79941c7fd86d3b46ec15c69ffccade2);
+            
+    
+            var marker_5fa88c9734f1017f7f8064249b047f0d = L.marker(
+                [37.7955, -122.3937],
+                {
+}
+            ).addTo(map_e6d68ccd80467147e06ef61513ab2fea);
+        
+    
+            var icon_90dfbeaf2eed25d88723ecf32b7c52ae = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7a9792a33b5e0de0fcb7fe557565cabe = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1fc18c58da55e7d825dda998babfe84e = $(`<div id="html_1fc18c58da55e7d825dda998babfe84e" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 250px;">                 <h4>Embarcadero</h4>                 <b>ROI Score:</b> 0.67<br>                 <b>Traffic:</b> 0.40<br>                 <b>Income:</b> 0.90<br>                 <b>Competition:</b> 0.80<br>                 <b>Competitors:</b> 4<br>                 <b>Nearby Businesses:</b> 20<br>                 <br>                 <a href="https://www.google.com/maps/search/?api=1&query=37.7955,-122.3937" target="_blank">Open in Google Maps</a>             </div>             </div>`)[0];
+                popup_7a9792a33b5e0de0fcb7fe557565cabe.setContent(html_1fc18c58da55e7d825dda998babfe84e);
+            
+        
+
+        marker_5fa88c9734f1017f7f8064249b047f0d.bindPopup(popup_7a9792a33b5e0de0fcb7fe557565cabe)
+        ;
+
+        
+    
+    
+            marker_5fa88c9734f1017f7f8064249b047f0d.bindTooltip(
+                `<div>
+                     Embarcadero (ROI: 0.67)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5fa88c9734f1017f7f8064249b047f0d.setIcon(icon_90dfbeaf2eed25d88723ecf32b7c52ae);
+            
+    
+            var marker_9ae49dc6a4411c092d2ec3b2e9f039cc = L.marker(
+                [37.7609, -122.435],
+                {
+}
+            ).addTo(map_e6d68ccd80467147e06ef61513ab2fea);
+        
+    
+            var icon_8e5dcff5d330001d95e10ad01dccee2f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_22ce2e8858ff816a4354748932912734 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2d47c94df2cb38d9ca7c19f1ff48c23a = $(`<div id="html_2d47c94df2cb38d9ca7c19f1ff48c23a" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 250px;">                 <h4>Castro District</h4>                 <b>ROI Score:</b> 0.66<br>                 <b>Traffic:</b> 0.40<br>                 <b>Income:</b> 0.70<br>                 <b>Competition:</b> 0.95<br>                 <b>Competitors:</b> 1<br>                 <b>Nearby Businesses:</b> 20<br>                 <br>                 <a href="https://www.google.com/maps/search/?api=1&query=37.7609,-122.435" target="_blank">Open in Google Maps</a>             </div>             </div>`)[0];
+                popup_22ce2e8858ff816a4354748932912734.setContent(html_2d47c94df2cb38d9ca7c19f1ff48c23a);
+            
+        
+
+        marker_9ae49dc6a4411c092d2ec3b2e9f039cc.bindPopup(popup_22ce2e8858ff816a4354748932912734)
+        ;
+
+        
+    
+    
+            marker_9ae49dc6a4411c092d2ec3b2e9f039cc.bindTooltip(
+                `<div>
+                     Castro District (ROI: 0.66)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9ae49dc6a4411c092d2ec3b2e9f039cc.setIcon(icon_8e5dcff5d330001d95e10ad01dccee2f);
+            
+    
+            var marker_f6670f9a0413e300319c38c27bc41c8a = L.marker(
+                [37.7693, -122.4482],
+                {
+}
+            ).addTo(map_e6d68ccd80467147e06ef61513ab2fea);
+        
+    
+            var icon_e7bcdfb42f2bcdacb0d0dfe2169063ee = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_30be6cf22745d6abf13ee4e7fceaf118 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a8671531559a39409924b0df94ab0925 = $(`<div id="html_a8671531559a39409924b0df94ab0925" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 250px;">                 <h4>Haight-Ashbury</h4>                 <b>ROI Score:</b> 0.59<br>                 <b>Traffic:</b> 0.40<br>                 <b>Income:</b> 0.50<br>                 <b>Competition:</b> 0.95<br>                 <b>Competitors:</b> 1<br>                 <b>Nearby Businesses:</b> 20<br>                 <br>                 <a href="https://www.google.com/maps/search/?api=1&query=37.7693,-122.4482" target="_blank">Open in Google Maps</a>             </div>             </div>`)[0];
+                popup_30be6cf22745d6abf13ee4e7fceaf118.setContent(html_a8671531559a39409924b0df94ab0925);
+            
+        
+
+        marker_f6670f9a0413e300319c38c27bc41c8a.bindPopup(popup_30be6cf22745d6abf13ee4e7fceaf118)
+        ;
+
+        
+    
+    
+            marker_f6670f9a0413e300319c38c27bc41c8a.bindTooltip(
+                `<div>
+                     Haight-Ashbury (ROI: 0.59)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f6670f9a0413e300319c38c27bc41c8a.setIcon(icon_e7bcdfb42f2bcdacb0d0dfe2169063ee);
+            
+    
+            var marker_1f778a7a154b4aea900dd3a84ec112aa = L.marker(
+                [37.7749, -122.4268],
+                {
+}
+            ).addTo(map_e6d68ccd80467147e06ef61513ab2fea);
+        
+    
+            var icon_c7f8e8a62715917a3d54286677d69418 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4ac55c3e594cdd89578dc44050947400 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_da1c6e23dbcd9619ba55ec114f9ff4c4 = $(`<div id="html_da1c6e23dbcd9619ba55ec114f9ff4c4" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 250px;">                 <h4>Hayes Valley</h4>                 <b>ROI Score:</b> 0.58<br>                 <b>Traffic:</b> 0.40<br>                 <b>Income:</b> 0.70<br>                 <b>Competition:</b> 0.70<br>                 <b>Competitors:</b> 6<br>                 <b>Nearby Businesses:</b> 20<br>                 <br>                 <a href="https://www.google.com/maps/search/?api=1&query=37.7749,-122.4268" target="_blank">Open in Google Maps</a>             </div>             </div>`)[0];
+                popup_4ac55c3e594cdd89578dc44050947400.setContent(html_da1c6e23dbcd9619ba55ec114f9ff4c4);
+            
+        
+
+        marker_1f778a7a154b4aea900dd3a84ec112aa.bindPopup(popup_4ac55c3e594cdd89578dc44050947400)
+        ;
+
+        
+    
+    
+            marker_1f778a7a154b4aea900dd3a84ec112aa.bindTooltip(
+                `<div>
+                     Hayes Valley (ROI: 0.58)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1f778a7a154b4aea900dd3a84ec112aa.setIcon(icon_c7f8e8a62715917a3d54286677d69418);
+            
+    
+            var marker_ad431fdf0c64f016397b527bec6012a7 = L.marker(
+                [37.8006, -122.4103],
+                {
+}
+            ).addTo(map_e6d68ccd80467147e06ef61513ab2fea);
+        
+    
+            var icon_c20ccbaa3c191c6d0672ba62c004221b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f5480b216c80ef24933b10151635a9ac = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_150b865d8e88dccd0cada67854448152 = $(`<div id="html_150b865d8e88dccd0cada67854448152" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 250px;">                 <h4>North Beach</h4>                 <b>ROI Score:</b> 0.58<br>                 <b>Traffic:</b> 0.40<br>                 <b>Income:</b> 0.70<br>                 <b>Competition:</b> 0.70<br>                 <b>Competitors:</b> 6<br>                 <b>Nearby Businesses:</b> 20<br>                 <br>                 <a href="https://www.google.com/maps/search/?api=1&query=37.8006,-122.4103" target="_blank">Open in Google Maps</a>             </div>             </div>`)[0];
+                popup_f5480b216c80ef24933b10151635a9ac.setContent(html_150b865d8e88dccd0cada67854448152);
+            
+        
+
+        marker_ad431fdf0c64f016397b527bec6012a7.bindPopup(popup_f5480b216c80ef24933b10151635a9ac)
+        ;
+
+        
+    
+    
+            marker_ad431fdf0c64f016397b527bec6012a7.bindTooltip(
+                `<div>
+                     North Beach (ROI: 0.58)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ad431fdf0c64f016397b527bec6012a7.setIcon(icon_c20ccbaa3c191c6d0672ba62c004221b);
+            
+    
+            var marker_39a02b2ee55cb7c25eb2d849ab98e83e = L.marker(
+                [37.7927, -122.4145],
+                {
+}
+            ).addTo(map_e6d68ccd80467147e06ef61513ab2fea);
+        
+    
+            var icon_8e640bab74f36026d153b2509a2df1d0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_64577690a0f9161fdd02cc8c745713d0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8cfba53fea7d7b3ff7386c95901a5631 = $(`<div id="html_8cfba53fea7d7b3ff7386c95901a5631" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 250px;">                 <h4>Nob Hill</h4>                 <b>ROI Score:</b> 0.56<br>                 <b>Traffic:</b> 0.40<br>                 <b>Income:</b> 0.90<br>                 <b>Competition:</b> 0.45<br>                 <b>Competitors:</b> 11<br>                 <b>Nearby Businesses:</b> 20<br>                 <br>                 <a href="https://www.google.com/maps/search/?api=1&query=37.7927,-122.4145" target="_blank">Open in Google Maps</a>             </div>             </div>`)[0];
+                popup_64577690a0f9161fdd02cc8c745713d0.setContent(html_8cfba53fea7d7b3ff7386c95901a5631);
+            
+        
+
+        marker_39a02b2ee55cb7c25eb2d849ab98e83e.bindPopup(popup_64577690a0f9161fdd02cc8c745713d0)
+        ;
+
+        
+    
+    
+            marker_39a02b2ee55cb7c25eb2d849ab98e83e.bindTooltip(
+                `<div>
+                     Nob Hill (ROI: 0.56)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_39a02b2ee55cb7c25eb2d849ab98e83e.setIcon(icon_8e640bab74f36026d153b2509a2df1d0);
+            
+    
+            var marker_c1002606919cc8dd8bbdf5080fcc6186 = L.marker(
+                [37.7749, -122.4194],
+                {
+}
+            ).addTo(map_e6d68ccd80467147e06ef61513ab2fea);
+        
+    
+            var icon_bab2e92d7dcdc5a3d99ffd3645ee55de = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f9202e65c05bd04c30c72a0f1c4c2440 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_75700b68259140eccf9fe29196ffe6d3 = $(`<div id="html_75700b68259140eccf9fe29196ffe6d3" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 250px;">                 <h4>SoMa (South of Market)</h4>                 <b>ROI Score:</b> 0.55<br>                 <b>Traffic:</b> 0.40<br>                 <b>Income:</b> 0.70<br>                 <b>Competition:</b> 0.60<br>                 <b>Competitors:</b> 8<br>                 <b>Nearby Businesses:</b> 20<br>                 <br>                 <a href="https://www.google.com/maps/search/?api=1&query=37.7749,-122.4194" target="_blank">Open in Google Maps</a>             </div>             </div>`)[0];
+                popup_f9202e65c05bd04c30c72a0f1c4c2440.setContent(html_75700b68259140eccf9fe29196ffe6d3);
+            
+        
+
+        marker_c1002606919cc8dd8bbdf5080fcc6186.bindPopup(popup_f9202e65c05bd04c30c72a0f1c4c2440)
+        ;
+
+        
+    
+    
+            marker_c1002606919cc8dd8bbdf5080fcc6186.bindTooltip(
+                `<div>
+                     SoMa (South of Market) (ROI: 0.55)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c1002606919cc8dd8bbdf5080fcc6186.setIcon(icon_bab2e92d7dcdc5a3d99ffd3645ee55de);
+            
+    
+            var marker_93617154e849a0e8d7f078b7669e4921 = L.marker(
+                [37.7599, -122.4148],
+                {
+}
+            ).addTo(map_e6d68ccd80467147e06ef61513ab2fea);
+        
+    
+            var icon_a5626409beb87bd2275f8259c51b053d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_20238945a6878932505baa6376ac2da4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ed2cc703a936bc7959223d51b3f54d22 = $(`<div id="html_ed2cc703a936bc7959223d51b3f54d22" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 250px;">                 <h4>Mission District</h4>                 <b>ROI Score:</b> 0.52<br>                 <b>Traffic:</b> 0.40<br>                 <b>Income:</b> 0.50<br>                 <b>Competition:</b> 0.70<br>                 <b>Competitors:</b> 6<br>                 <b>Nearby Businesses:</b> 20<br>                 <br>                 <a href="https://www.google.com/maps/search/?api=1&query=37.7599,-122.4148" target="_blank">Open in Google Maps</a>             </div>             </div>`)[0];
+                popup_20238945a6878932505baa6376ac2da4.setContent(html_ed2cc703a936bc7959223d51b3f54d22);
+            
+        
+
+        marker_93617154e849a0e8d7f078b7669e4921.bindPopup(popup_20238945a6878932505baa6376ac2da4)
+        ;
+
+        
+    
+    
+            marker_93617154e849a0e8d7f078b7669e4921.bindTooltip(
+                `<div>
+                     Mission District (ROI: 0.52)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_93617154e849a0e8d7f078b7669e4921.setIcon(icon_a5626409beb87bd2275f8259c51b053d);
+            
+</script>
+</html>

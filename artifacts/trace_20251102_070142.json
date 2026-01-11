@@ -1,0 +1,72 @@
+{
+  "pipeline": "Full Live Plan",
+  "timestamp": "2025-11-02T07:01:42.584029",
+  "results": {
+    "reviews": {
+      "scraped": false,
+      "error": "'charmap' codec can't encode character '\\u2192' in position 2: character maps to <undefined>"
+    },
+    "ubereats": {
+      "scraped": true,
+      "orders_today": 45,
+      "revenue": 1250
+    },
+    "weather": {
+      "temp": 68,
+      "conditions": "Sunny",
+      "factor": 1.15
+    },
+    "traffic": {
+      "level": "Medium",
+      "factor": 1.05
+    },
+    "events": {
+      "count": 2,
+      "impact": "High",
+      "factor": 1.2
+    },
+    "forecast": {
+      "total_orders": 47,
+      "revenue": 869.5,
+      "confidence": 0.9
+    },
+    "asana": {
+      "tasks_created": 4,
+      "staff": [
+        "Bobby Maguire",
+        "Mary McCunnigham",
+        "Lia Hunt",
+        "Tory Kest"
+      ]
+    },
+    "supplier": {
+      "items_ordered": [
+        "Wings",
+        "Rice bowls",
+        "Beverages"
+      ],
+      "auto_filled": true
+    },
+    "expansion": {
+      "city": "San Francisco",
+      "top_location": "Mission District",
+      "roi_score": 9.2
+    },
+    "analyst": {
+      "question": "Why add a cook tomorrow?",
+      "answer": "Tomorrow is high-demand due to sunny weather (+30%), LSTM peak at 6 PM, and Friday traffic (+18%).",
+      "citations": 3,
+      "confidence": 0.88
+    },
+    "voice": {
+      "summary": "Tomorrow is high-demand. Added 1 cook for lunch. Ordered extra wings. Confidence 88 percent.",
+      "spoken": true
+    }
+  },
+  "artifacts": [
+    "artifacts/ubereats_20251102_070046.json",
+    "artifacts/asana_tasks_20251102_070141.png",
+    "artifacts/supplier_order_20251102_070141.png",
+    "artifacts/expansion_map_20251102_070141.html"
+  ]
+}
