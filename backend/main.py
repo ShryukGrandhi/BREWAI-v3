@@ -814,8 +814,8 @@ async def create_order(request: CreateOrderRequest):
 @app.get("/api/data/orders")
 async def get_orders():
     """Get all live orders"""
-        return {
-            "success": True,
+    return {
+        "success": True,
         "data": LIVE_ORDERS,
         "count": len(LIVE_ORDERS)
     }
@@ -829,8 +829,8 @@ async def get_analytics():
     total_revenue = sum(order.get("total_amount", 0) for order in LIVE_ORDERS)
     profit_margin = 29 if total_revenue > 0 else 0
     
-        return {
-            "success": True,
+    return {
+        "success": True,
         "revenue": f"${total_revenue:,.2f}",
         "revenue_raw": total_revenue,
         "orders": total_orders,
@@ -843,17 +843,17 @@ async def get_analytics():
 @app.get("/api/data/inventory")
 async def get_inventory():
     """Get live inventory"""
-        return {
-            "success": True,
+    return {
+        "success": True,
         "data": LIVE_INVENTORY,
         "count": len(LIVE_INVENTORY)
-        }
+    }
 
 @app.get("/api/data/staff")
 async def get_staff():
     """Get staff data"""
-        return {
-            "success": True,
+    return {
+        "success": True,
         "data": LIVE_STAFF,
         "count": len(LIVE_STAFF)
     }
@@ -944,22 +944,75 @@ async def check_emails():
             }
         
         # Extract messages from various response formats
-        response_data = result.get("data", result.get("response_data", result.get("output", result)))
-        print(f"[EMAIL CHECK] Response data type: {type(response_data)}")
+        # Composio API typically returns: {"data": {...}} or {"output": {...}} or direct structure
+        print(f"[EMAIL CHECK] Full Composio response: {json.dumps(result, indent=2)[:1500]}")
         
-        # Handle different response formats
+        response_data = None
+        if "data" in result:
+            response_data = result["data"]
+        elif "output" in result:
+            response_data = result["output"]
+        elif "response_data" in result:
+            response_data = result["response_data"]
+        elif "result" in result:
+            response_data = result["result"]
+        else:
+            response_data = result
+        
+        print(f"[EMAIL CHECK] Response data type: {type(response_data)}")
+        print(f"[EMAIL CHECK] Response data keys: {list(response_data.keys()) if isinstance(response_data, dict) else 'N/A (not a dict)'}")
+        
+        # Handle different response formats - Gmail API typically returns messages in a "messages" array
         messages = []
         if isinstance(response_data, dict):
-            messages = response_data.get("messages", response_data.get("emails", response_data.get("data", response_data.get("result", []))))
+            # Try common field names for message arrays
+            if "messages" in response_data:
+                messages = response_data["messages"]
+                # If messages is a dict with "messages" array inside (Gmail API format)
+                if isinstance(messages, dict) and "messages" in messages:
+                    messages = messages["messages"]
+            elif "emails" in response_data:
+                messages = response_data["emails"]
+            elif "items" in response_data:
+                messages = response_data["items"]
+            elif "data" in response_data and isinstance(response_data["data"], list):
+                messages = response_data["data"]
+            elif isinstance(response_data.get("result"), list):
+                messages = response_data["result"]
         elif isinstance(response_data, list):
             messages = response_data
         
-        print(f"[EMAIL CHECK] Found {len(messages)} messages")
+        # Extract message IDs if messages is a list of message ID objects (Gmail API format)
+        if messages and isinstance(messages[0], dict) and "id" in messages[0] and len(messages[0]) == 1:
+            # This is the Gmail API format where messages list contains {"id": "..."} objects
+            # We need to fetch full message details for each
+            print(f"[EMAIL CHECK] Found {len(messages)} message IDs, will fetch full details")
+        else:
+            print(f"[EMAIL CHECK] Found {len(messages)} messages (unread)")
         
+        # If no unread emails, try fetching all recent emails as fallback for debugging
         if not messages:
-            print("[EMAIL CHECK] No unread emails found")
-        return {
-            "success": True,
+            print("[EMAIL CHECK] No unread emails found, trying all recent emails...")
+            try:
+                fallback_result = await composio_execute("GMAIL_FETCH_EMAILS", {
+                    "max_results": 10,
+                    "label_ids": ["INBOX"]
+                })
+                fallback_data = fallback_result.get("data", fallback_result.get("response_data", fallback_result.get("output", fallback_result)))
+                if isinstance(fallback_data, dict):
+                    fallback_messages = fallback_data.get("messages", fallback_data.get("emails", fallback_data.get("data", fallback_data.get("result", []))))
+                elif isinstance(fallback_data, list):
+                    fallback_messages = fallback_data
+                else:
+                    fallback_messages = []
+                print(f"[EMAIL CHECK] Fallback: Found {len(fallback_messages)} total emails in inbox")
+                if fallback_messages:
+                    print(f"[EMAIL CHECK] Note: {len(fallback_messages)} emails exist but may already be read")
+            except Exception as e:
+                print(f"[EMAIL CHECK] Fallback fetch failed: {e}")
+            
+            return {
+                "success": True,
                 "crisis_detected": False,
                 "message": "No unread emails in inbox",
                 "emails_checked": 0,
@@ -1054,9 +1107,9 @@ async def check_emails():
                 pass
             
             add_activity("crisis", f"🚨 Crisis detected: {crisis['type']}", "error")
-        
-        return {
-            "success": True,
+            
+            return {
+                "success": True,
                 "crisis_detected": True,
                 "crisis": crisis,
                 "total_crises_found": len(crises_found),
@@ -1111,12 +1164,12 @@ async def respond_to_email(request: EmailCrisisRequest):
         
         if result:
             add_activity("email", f"Response sent to {recipient}", "info")
-        return {
-            "success": True,
+            return {
+                "success": True,
                 "message": "Response email sent",
                 "recipient": recipient,
                 "subject": subject
-        }
+            }
         else:
             return {"success": False, "error": "Failed to send email"}
                 
@@ -1223,9 +1276,9 @@ async def execute_crisis(request: CrisisRequest):
     update_compliance_score(compliance_impact, f"Crisis: {crisis.get('type')}")
     
     add_activity("crisis", f"Crisis handled: {crisis.get('type')}", "warning")
-        
-        return {
-            "success": True,
+    
+    return {
+        "success": True,
         "crisis": crisis,
         "automations_executed": len(results),
         "results": results,
@@ -1432,8 +1485,8 @@ User's message: {request.message}
     if gemini_model:
         try:
             response = gemini_model.generate_content(context)
-        return {
-            "success": True,
+            return {
+                "success": True,
                 "response": response.text,
                 "live_data": {
                     "orders": total_orders,
@@ -1441,8 +1494,8 @@ User's message: {request.message}
                     "staff": active_staff,
                     "compliance": COMPLIANCE_DATA["score"]
                 }
-        }
-    except Exception as e:
+            }
+        except Exception as e:
             return {
                 "success": False,
                 "error": str(e),
@@ -1491,8 +1544,8 @@ def generate_fallback_response(message: str) -> str:
 @app.get("/api/agent/status")
 async def get_agent_status():
     """Get current agent mode status"""
-        return {
-            "success": True,
+    return {
+        "success": True,
         "agent_mode": AGENT_MODE,
         "email_monitoring": AUTO_EMAIL_MONITORING
     }
