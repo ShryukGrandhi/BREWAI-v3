@@ -1,50 +1,52 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowRight, ArrowUpRight, Bot, ChefHat, BarChart3, Package, Zap, Users, Check, Play } from 'lucide-react';
+import { ArrowRight, Bot, ChefHat, BarChart3, Package, Zap, Users, Check, Play, Sparkles, TrendingUp, Shield, Globe } from 'lucide-react';
 import { useState } from 'react';
 
 export default function LandingPage() {
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [isHovered, setIsHovered] = useState<number | null>(null);
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-zinc-950 text-zinc-100">
+      {/* Gradient Background Effects */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-600/5 rounded-full blur-3xl" />
+      </div>
+
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-md">
+      <header className="fixed top-0 left-0 right-0 z-50 border-b border-zinc-800/50 bg-zinc-950/80 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-              <ChefHat className="h-5 w-5 text-primary-foreground" />
+          <Link href="/" className="flex items-center gap-3">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-400 to-emerald-600 shadow-lg shadow-emerald-500/25">
+              <ChefHat className="h-5 w-5 text-zinc-950" />
             </div>
-            <span className="text-lg font-semibold tracking-tight">BREWAI</span>
+            <span className="text-xl font-bold tracking-tight">BREWAI</span>
           </Link>
           
           <nav className="hidden items-center gap-8 md:flex">
-            <Link href="#features" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+            <Link href="#features" className="text-sm text-zinc-400 transition-colors hover:text-zinc-100">
               Features
             </Link>
-            <Link href="#how-it-works" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+            <Link href="#how-it-works" className="text-sm text-zinc-400 transition-colors hover:text-zinc-100">
               How it works
             </Link>
-            <Link href="#pricing" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+            <Link href="#pricing" className="text-sm text-zinc-400 transition-colors hover:text-zinc-100">
               Pricing
-            </Link>
-            <Link href="/docs" className="flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground">
-              Documentation
-              <ArrowUpRight className="h-3 w-3" />
             </Link>
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4">
             <Link
               href="/login"
-              className="hidden text-sm font-medium text-muted-foreground transition-colors hover:text-foreground sm:block"
+              className="hidden text-sm font-medium text-zinc-400 transition-colors hover:text-zinc-100 sm:block"
             >
               Log in
             </Link>
             <Link
               href="/signup"
-              className="inline-flex h-9 items-center justify-center rounded-full bg-foreground px-4 text-sm font-medium text-background transition-all hover:bg-foreground/90"
+              className="inline-flex h-10 items-center justify-center rounded-full bg-emerald-500 px-5 text-sm font-semibold text-zinc-950 transition-all hover:bg-emerald-400 hover:shadow-lg hover:shadow-emerald-500/25"
             >
               Get Started
             </Link>
@@ -53,54 +55,79 @@ export default function LandingPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 md:pt-44 md:pb-32">
+      <section className="relative pt-32 pb-20 md:pt-44 md:pb-32">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-4xl text-center">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-primary"></span>
-              </span>
-              <span className="text-sm text-muted-foreground">Now with AI-powered inventory predictions</span>
+            {/* Badge */}
+            <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-4 py-2">
+              <Sparkles className="h-4 w-4 text-emerald-400" />
+              <span className="text-sm font-medium text-emerald-400">AI-Powered Restaurant Intelligence</span>
             </div>
 
-            <h1 className="text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl text-balance">
-              The intelligent platform for restaurant operations
+            <h1 className="text-5xl font-bold tracking-tight leading-tight sm:text-6xl lg:text-7xl">
+              Run smarter restaurants with{' '}
+              <span className="bg-gradient-to-r from-emerald-400 via-emerald-300 to-teal-400 bg-clip-text text-transparent">
+                AI agents
+              </span>
             </h1>
             
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground text-pretty">
-              Automate inventory, optimize menus, and coordinate your team with AI agents that understand your business. Built for restaurants that want to scale.
+            <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-zinc-400">
+              Automate inventory, optimize menus, and coordinate your team with intelligent agents that understand your business. Built for restaurants ready to scale.
             </p>
 
-            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 href="/signup"
-                className="group inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-primary px-8 text-base font-medium text-primary-foreground transition-all hover:bg-primary/90 sm:w-auto"
+                className="group inline-flex h-14 w-full items-center justify-center gap-2 rounded-full bg-emerald-500 px-8 text-base font-semibold text-zinc-950 transition-all hover:bg-emerald-400 hover:shadow-xl hover:shadow-emerald-500/25 sm:w-auto"
               >
-                Start building
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                Start free trial
+                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
-              <button
-                onClick={() => setIsVideoPlaying(true)}
-                className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border border-border bg-card px-8 text-base font-medium transition-all hover:bg-secondary sm:w-auto"
-              >
-                <Play className="h-4 w-4" />
+              <button className="inline-flex h-14 w-full items-center justify-center gap-3 rounded-full border border-zinc-700 bg-zinc-900 px-8 text-base font-semibold transition-all hover:border-zinc-600 hover:bg-zinc-800 sm:w-auto">
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-zinc-800">
+                  <Play className="h-4 w-4 text-emerald-400" fill="currentColor" />
+                </div>
                 Watch demo
               </button>
+            </div>
+
+            {/* Trust Badges */}
+            <div className="mt-16 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-sm text-zinc-500">
+              <div className="flex items-center gap-2">
+                <Shield className="h-4 w-4" />
+                <span>SOC 2 Compliant</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Globe className="h-4 w-4" />
+                <span>500+ Restaurants</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <TrendingUp className="h-4 w-4" />
+                <span>$2M+ Saved Monthly</span>
+              </div>
             </div>
           </div>
 
           {/* Stats Row */}
-          <div className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-4">
+          <div className="mt-24 grid grid-cols-2 gap-4 md:grid-cols-4">
             {[
-              { value: '32%', label: 'reduction in food waste', company: 'Sweetgreen' },
-              { value: '4.2x', label: 'faster inventory counts', company: 'Chipotle' },
-              { value: '$48K', label: 'saved per location/year', company: 'Shake Shack' },
-              { value: '89%', label: 'staff satisfaction', company: 'Panera' },
+              { value: '32%', label: 'Food waste reduction', highlight: true },
+              { value: '4.2x', label: 'Faster inventory counts', highlight: false },
+              { value: '$48K', label: 'Saved per location/year', highlight: false },
+              { value: '89%', label: 'Staff satisfaction', highlight: false },
             ].map((stat, i) => (
-              <div key={i} className="flex flex-col gap-2 bg-card p-6 md:p-8">
-                <span className="text-3xl font-bold tracking-tight md:text-4xl">{stat.value}</span>
-                <span className="text-sm text-muted-foreground">{stat.label}</span>
+              <div 
+                key={i} 
+                className={`relative overflow-hidden rounded-2xl border p-6 transition-all ${
+                  stat.highlight 
+                    ? 'border-emerald-500/30 bg-emerald-500/5' 
+                    : 'border-zinc-800 bg-zinc-900/50'
+                }`}
+              >
+                <span className="block text-4xl font-bold tracking-tight text-zinc-100 md:text-5xl">
+                  {stat.value}
+                </span>
+                <span className="mt-2 block text-sm text-zinc-500">{stat.label}</span>
               </div>
             ))}
           </div>
@@ -108,78 +135,116 @@ export default function LandingPage() {
       </section>
 
       {/* Dashboard Preview */}
-      <section className="border-t border-border py-24">
+      <section className="py-24">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="overflow-hidden rounded-2xl border border-border bg-card">
-            <div className="border-b border-border px-4 py-3">
-              <div className="flex items-center gap-2">
-                <div className="h-3 w-3 rounded-full bg-red-500/80"></div>
-                <div className="h-3 w-3 rounded-full bg-yellow-500/80"></div>
-                <div className="h-3 w-3 rounded-full bg-green-500/80"></div>
-                <span className="ml-4 text-xs text-muted-foreground">dashboard.brewai.com</span>
+          <div className="overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 shadow-2xl shadow-black/50">
+            {/* Browser Chrome */}
+            <div className="flex items-center gap-3 border-b border-zinc-800 px-4 py-3">
+              <div className="flex gap-2">
+                <div className="h-3 w-3 rounded-full bg-zinc-700" />
+                <div className="h-3 w-3 rounded-full bg-zinc-700" />
+                <div className="h-3 w-3 rounded-full bg-zinc-700" />
+              </div>
+              <div className="ml-4 flex-1 rounded-lg bg-zinc-800 px-4 py-1.5">
+                <span className="text-xs text-zinc-500">app.brewai.com/dashboard</span>
               </div>
             </div>
-            <div className="p-1">
-              <div className="aspect-[16/9] rounded-lg bg-secondary/50">
-                <div className="flex h-full">
-                  {/* Sidebar */}
-                  <div className="hidden w-56 border-r border-border bg-card/50 p-4 lg:block">
-                    <div className="mb-6 flex items-center gap-2">
-                      <div className="h-8 w-8 rounded-lg bg-primary/20"></div>
-                      <div className="h-4 w-20 rounded bg-muted"></div>
+            
+            {/* Dashboard Content */}
+            <div className="flex">
+              {/* Sidebar */}
+              <div className="hidden w-64 border-r border-zinc-800 bg-zinc-950/50 p-4 lg:block">
+                <div className="mb-8 flex items-center gap-3">
+                  <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-emerald-400 to-emerald-600" />
+                  <div>
+                    <div className="h-4 w-24 rounded bg-zinc-800" />
+                    <div className="mt-1.5 h-3 w-16 rounded bg-zinc-800/50" />
+                  </div>
+                </div>
+                <nav className="space-y-1">
+                  {['Overview', 'Menu', 'Inventory', 'Analytics', 'AI Agents', 'Team'].map((item, i) => (
+                    <div 
+                      key={i} 
+                      className={`flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm ${
+                        i === 0 ? 'bg-emerald-500/10 text-emerald-400' : 'text-zinc-500'
+                      }`}
+                    >
+                      <div className={`h-5 w-5 rounded-lg ${i === 0 ? 'bg-emerald-500/20' : 'bg-zinc-800'}`} />
+                      {item}
                     </div>
-                    <div className="space-y-2">
-                      {['Overview', 'Menu', 'Inventory', 'Analytics', 'AI Agents', 'Team'].map((item, i) => (
-                        <div key={i} className={`flex items-center gap-3 rounded-lg px-3 py-2 ${i === 0 ? 'bg-secondary' : ''}`}>
-                          <div className="h-4 w-4 rounded bg-muted"></div>
-                          <span className="text-sm text-muted-foreground">{item}</span>
-                        </div>
+                  ))}
+                </nav>
+              </div>
+              
+              {/* Main Area */}
+              <div className="flex-1 p-6">
+                {/* Header */}
+                <div className="mb-6 flex items-center justify-between">
+                  <div>
+                    <div className="h-6 w-40 rounded-lg bg-zinc-800" />
+                    <div className="mt-2 h-4 w-32 rounded bg-zinc-800/50" />
+                  </div>
+                  <div className="flex gap-3">
+                    <div className="h-10 w-10 rounded-xl bg-zinc-800" />
+                    <div className="h-10 w-28 rounded-xl bg-emerald-500/20" />
+                  </div>
+                </div>
+                
+                {/* Stat Cards */}
+                <div className="mb-6 grid grid-cols-2 gap-4 lg:grid-cols-4">
+                  {[
+                    { label: 'Revenue', value: '$24,892', trend: '+12%', up: true },
+                    { label: 'Orders', value: '1,284', trend: '+8%', up: true },
+                    { label: 'Inventory', value: '94%', trend: '-2%', up: false },
+                    { label: 'Staff', value: '18', trend: '+3', up: true },
+                  ].map((card, i) => (
+                    <div key={i} className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-4">
+                      <span className="text-xs text-zinc-500">{card.label}</span>
+                      <div className="mt-1 flex items-end justify-between">
+                        <span className="text-2xl font-bold text-zinc-100">{card.value}</span>
+                        <span className={`text-xs font-medium ${card.up ? 'text-emerald-400' : 'text-amber-400'}`}>
+                          {card.trend}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Charts */}
+                <div className="grid gap-4 lg:grid-cols-3">
+                  <div className="col-span-2 rounded-2xl border border-zinc-800 bg-zinc-900/50 p-4">
+                    <div className="mb-4 flex items-center justify-between">
+                      <span className="text-sm font-medium text-zinc-400">Revenue Overview</span>
+                      <div className="flex gap-2">
+                        <div className="h-6 w-16 rounded-lg bg-zinc-800" />
+                        <div className="h-6 w-16 rounded-lg bg-zinc-800" />
+                      </div>
+                    </div>
+                    <div className="flex h-48 items-end gap-2 pt-4">
+                      {[35, 55, 45, 70, 60, 80, 75, 95, 85, 70, 90, 100].map((h, i) => (
+                        <div key={i} className="flex-1 rounded-t-lg bg-gradient-to-t from-emerald-600 to-emerald-400 transition-all hover:opacity-80" style={{ height: `${h}%` }} />
                       ))}
                     </div>
                   </div>
-                  
-                  {/* Main Content */}
-                  <div className="flex-1 p-6">
-                    <div className="mb-6 flex items-center justify-between">
-                      <div className="h-6 w-32 rounded bg-muted"></div>
-                      <div className="h-8 w-24 rounded-lg bg-primary/20"></div>
-                    </div>
-                    
-                    {/* Stats Cards */}
-                    <div className="mb-6 grid grid-cols-2 gap-4 lg:grid-cols-4">
-                      {[1, 2, 3, 4].map((i) => (
-                        <div key={i} className="rounded-xl border border-border bg-card p-4">
-                          <div className="mb-2 h-3 w-16 rounded bg-muted"></div>
-                          <div className="h-7 w-20 rounded bg-muted"></div>
-                          <div className="mt-2 h-2 w-12 rounded bg-primary/30"></div>
+                  <div className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-4">
+                    <span className="text-sm font-medium text-zinc-400">AI Agent Activity</span>
+                    <div className="mt-4 space-y-3">
+                      {[
+                        { action: 'Reorder: Tomatoes', status: 'Pending approval', color: 'amber' },
+                        { action: 'Price update: Pasta', status: 'Approved', color: 'emerald' },
+                        { action: 'Schedule: Weekend', status: 'Processing', color: 'blue' },
+                      ].map((item, i) => (
+                        <div key={i} className="flex items-center gap-3">
+                          <div className={`h-2 w-2 rounded-full ${
+                            item.color === 'amber' ? 'bg-amber-400' : 
+                            item.color === 'emerald' ? 'bg-emerald-400' : 'bg-blue-400'
+                          }`} />
+                          <div className="flex-1">
+                            <div className="text-sm text-zinc-300">{item.action}</div>
+                            <div className="text-xs text-zinc-600">{item.status}</div>
+                          </div>
                         </div>
                       ))}
-                    </div>
-                    
-                    {/* Chart Area */}
-                    <div className="grid gap-4 lg:grid-cols-3">
-                      <div className="col-span-2 rounded-xl border border-border bg-card p-4">
-                        <div className="mb-4 h-4 w-24 rounded bg-muted"></div>
-                        <div className="flex h-40 items-end gap-2">
-                          {[40, 65, 45, 80, 55, 70, 85, 60, 75, 50, 90, 65].map((h, i) => (
-                            <div key={i} className="flex-1 rounded-t bg-primary/40" style={{ height: `${h}%` }}></div>
-                          ))}
-                        </div>
-                      </div>
-                      <div className="rounded-xl border border-border bg-card p-4">
-                        <div className="mb-4 h-4 w-20 rounded bg-muted"></div>
-                        <div className="space-y-3">
-                          {[1, 2, 3, 4].map((i) => (
-                            <div key={i} className="flex items-center gap-3">
-                              <div className="h-8 w-8 rounded-full bg-muted"></div>
-                              <div className="flex-1">
-                                <div className="mb-1 h-3 w-full rounded bg-muted"></div>
-                                <div className="h-2 w-2/3 rounded bg-muted/50"></div>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -190,57 +255,71 @@ export default function LandingPage() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="border-t border-border py-24">
+      <section id="features" className="py-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-16 max-w-2xl">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Powerful features for modern restaurants
+            <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+              Everything you need to run{' '}
+              <span className="text-emerald-400">smarter</span>
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Everything you need to run smarter operations, built with AI at the core.
+            <p className="mt-4 text-lg text-zinc-400">
+              Powerful AI features designed specifically for restaurant operations.
             </p>
           </div>
 
-          <div className="grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 icon: Bot,
                 title: 'AI Agents',
                 description: 'Autonomous agents handle inventory reordering, menu pricing, and staff scheduling with human-in-the-loop approval.',
+                gradient: 'from-emerald-500 to-teal-500',
               },
               {
                 icon: BarChart3,
                 title: 'Real-time Analytics',
                 description: 'Live dashboards with sales metrics, inventory levels, and operational KPIs across all your locations.',
+                gradient: 'from-blue-500 to-cyan-500',
               },
               {
                 icon: ChefHat,
                 title: 'Menu Intelligence',
                 description: 'AI-driven menu optimization based on ingredient costs, demand patterns, and profit margins.',
+                gradient: 'from-orange-500 to-amber-500',
               },
               {
                 icon: Package,
                 title: 'Smart Inventory',
-                description: 'Predictive inventory management that reduces waste and ensures you never run out of key ingredients.',
+                description: 'Predictive inventory management that reduces waste and ensures you never run out.',
+                gradient: 'from-violet-500 to-purple-500',
               },
               {
                 icon: Zap,
                 title: 'Instant Integrations',
-                description: 'Connect with your POS, suppliers, and delivery platforms in minutes, not months.',
+                description: 'Connect with your POS, suppliers, and delivery platforms in minutes.',
+                gradient: 'from-pink-500 to-rose-500',
               },
               {
                 icon: Users,
                 title: 'Team Coordination',
-                description: 'Announcements, task assignments, and shift management with role-based access control.',
+                description: 'Announcements, task assignments, and shift management with role-based access.',
+                gradient: 'from-indigo-500 to-blue-500',
               },
             ].map((feature, i) => (
-              <div key={i} className="group relative bg-card p-8 transition-colors hover:bg-secondary/50">
-                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                  <feature.icon className="h-5 w-5 text-primary" />
+              <div 
+                key={i} 
+                className="group relative overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6 transition-all hover:border-zinc-700 hover:bg-zinc-900"
+                onMouseEnter={() => setIsHovered(i)}
+                onMouseLeave={() => setIsHovered(null)}
+              >
+                <div className={`mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${feature.gradient} shadow-lg`}>
+                  <feature.icon className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="mb-2 text-lg font-semibold">{feature.title}</h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">{feature.description}</p>
-                <ArrowUpRight className="absolute right-6 top-6 h-4 w-4 text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100" />
+                <h3 className="mb-2 text-lg font-semibold text-zinc-100">{feature.title}</h3>
+                <p className="text-sm leading-relaxed text-zinc-400">{feature.description}</p>
+                
+                {/* Hover glow effect */}
+                <div className={`absolute inset-0 -z-10 opacity-0 transition-opacity group-hover:opacity-100 bg-gradient-to-br ${feature.gradient}`} style={{ opacity: isHovered === i ? 0.05 : 0 }} />
               </div>
             ))}
           </div>
@@ -248,44 +327,44 @@ export default function LandingPage() {
       </section>
 
       {/* How it Works */}
-      <section id="how-it-works" className="border-t border-border py-24">
+      <section id="how-it-works" className="py-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-16 text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Get started in minutes
+            <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+              Get started in <span className="text-emerald-400">minutes</span>
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-4 text-lg text-zinc-400">
               Three simple steps to transform your restaurant operations
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="relative grid gap-8 md:grid-cols-3">
+            {/* Connecting line */}
+            <div className="absolute top-16 left-0 right-0 hidden h-0.5 bg-gradient-to-r from-zinc-900 via-zinc-700 to-zinc-900 md:block" />
+            
             {[
               {
-                step: '1',
+                step: '01',
                 title: 'Connect your systems',
                 description: 'Integrate your POS, inventory management, and supplier systems with our one-click connectors.',
               },
               {
-                step: '2',
+                step: '02',
                 title: 'Configure AI agents',
                 description: 'Set up autonomous agents for inventory, pricing, and scheduling with your approval thresholds.',
               },
               {
-                step: '3',
+                step: '03',
                 title: 'Watch it work',
                 description: 'AI handles the routine while you focus on growth. Review and approve critical decisions.',
               },
             ].map((item, i) => (
-              <div key={i} className="relative">
-                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary text-xl font-bold text-primary">
+              <div key={i} className="relative text-center">
+                <div className="relative z-10 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl border border-zinc-700 bg-zinc-900 text-2xl font-bold text-emerald-400">
                   {item.step}
                 </div>
-                <h3 className="mb-3 text-xl font-semibold">{item.title}</h3>
-                <p className="text-muted-foreground">{item.description}</p>
-                {i < 2 && (
-                  <div className="absolute right-0 top-6 hidden h-px w-full bg-border md:block" style={{ left: '60px', width: 'calc(100% - 24px)' }}></div>
-                )}
+                <h3 className="mb-3 text-xl font-semibold text-zinc-100">{item.title}</h3>
+                <p className="text-zinc-400">{item.description}</p>
               </div>
             ))}
           </div>
@@ -293,18 +372,18 @@ export default function LandingPage() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="border-t border-border py-24">
+      <section id="pricing" className="py-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-16 text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Simple, transparent pricing
+            <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+              Simple, <span className="text-emerald-400">transparent</span> pricing
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-4 text-lg text-zinc-400">
               Start free, scale as you grow
             </p>
           </div>
 
-          <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-3">
+          <div className="mx-auto grid max-w-5xl gap-6 lg:grid-cols-3">
             {[
               {
                 name: 'Starter',
@@ -333,39 +412,37 @@ export default function LandingPage() {
             ].map((plan, i) => (
               <div
                 key={i}
-                className={`relative rounded-2xl border p-8 ${
+                className={`relative overflow-hidden rounded-3xl border p-8 transition-all ${
                   plan.highlighted
-                    ? 'border-primary bg-card'
-                    : 'border-border bg-card/50'
+                    ? 'border-emerald-500/50 bg-gradient-to-b from-emerald-500/10 to-transparent'
+                    : 'border-zinc-800 bg-zinc-900/50 hover:border-zinc-700'
                 }`}
               >
                 {plan.highlighted && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
-                    Most popular
-                  </div>
+                  <div className="absolute -top-px left-1/2 h-px w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-emerald-500 to-transparent" />
                 )}
                 <div className="mb-6">
-                  <h3 className="text-lg font-semibold">{plan.name}</h3>
-                  <div className="mt-2 flex items-baseline gap-1">
-                    <span className="text-4xl font-bold">{plan.price}</span>
-                    {plan.price !== 'Custom' && <span className="text-muted-foreground">/month</span>}
+                  <h3 className="text-lg font-semibold text-zinc-100">{plan.name}</h3>
+                  <div className="mt-3 flex items-baseline gap-1">
+                    <span className="text-5xl font-bold tracking-tight text-zinc-100">{plan.price}</span>
+                    {plan.price !== 'Custom' && <span className="text-zinc-500">/month</span>}
                   </div>
-                  <p className="mt-2 text-sm text-muted-foreground">{plan.description}</p>
+                  <p className="mt-3 text-sm text-zinc-400">{plan.description}</p>
                 </div>
-                <ul className="mb-8 space-y-3">
+                <ul className="mb-8 space-y-4">
                   {plan.features.map((feature, j) => (
-                    <li key={j} className="flex items-center gap-3 text-sm">
-                      <Check className="h-4 w-4 text-primary" />
+                    <li key={j} className="flex items-center gap-3 text-sm text-zinc-300">
+                      <Check className={`h-5 w-5 ${plan.highlighted ? 'text-emerald-400' : 'text-zinc-600'}`} />
                       {feature}
                     </li>
                   ))}
                 </ul>
                 <Link
                   href="/signup"
-                  className={`inline-flex h-10 w-full items-center justify-center rounded-full text-sm font-medium transition-colors ${
+                  className={`inline-flex h-12 w-full items-center justify-center rounded-xl text-sm font-semibold transition-all ${
                     plan.highlighted
-                      ? 'bg-primary text-primary-foreground hover:bg-primary/90'
-                      : 'border border-border bg-secondary hover:bg-secondary/80'
+                      ? 'bg-emerald-500 text-zinc-950 hover:bg-emerald-400'
+                      : 'border border-zinc-700 bg-zinc-800 text-zinc-100 hover:bg-zinc-700'
                   }`}
                 >
                   {plan.cta}
@@ -377,32 +454,34 @@ export default function LandingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="border-t border-border py-24">
+      <section className="py-24">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="overflow-hidden rounded-2xl bg-secondary">
-            <div className="relative px-8 py-16 sm:px-16 sm:py-24">
-              <div className="relative mx-auto max-w-2xl text-center">
-                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-balance">
-                  Ready to transform your restaurant operations?
-                </h2>
-                <p className="mt-4 text-lg text-muted-foreground">
-                  Join hundreds of restaurants already using BREWAI to reduce waste, optimize menus, and scale their business.
-                </p>
-                <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                  <Link
-                    href="/signup"
-                    className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-primary px-8 text-base font-medium text-primary-foreground transition-all hover:bg-primary/90"
-                  >
-                    Start your free trial
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="inline-flex h-12 items-center justify-center rounded-full border border-border px-8 text-base font-medium transition-colors hover:bg-card"
-                  >
-                    Talk to sales
-                  </Link>
-                </div>
+          <div className="relative overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 px-8 py-20 sm:px-16">
+            {/* Background gradient */}
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-teal-500/10" />
+            <div className="absolute top-0 right-0 h-96 w-96 translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-500/20 blur-3xl" />
+            
+            <div className="relative mx-auto max-w-2xl text-center">
+              <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+                Ready to transform your restaurant?
+              </h2>
+              <p className="mt-4 text-lg text-zinc-400">
+                Join 500+ restaurants already using BREWAI to reduce waste, optimize menus, and scale their business.
+              </p>
+              <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+                <Link
+                  href="/signup"
+                  className="group inline-flex h-14 items-center justify-center gap-2 rounded-full bg-emerald-500 px-8 text-base font-semibold text-zinc-950 transition-all hover:bg-emerald-400 hover:shadow-xl hover:shadow-emerald-500/25"
+                >
+                  Start your free trial
+                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex h-14 items-center justify-center rounded-full border border-zinc-700 bg-zinc-800/50 px-8 text-base font-semibold transition-all hover:bg-zinc-800"
+                >
+                  Talk to sales
+                </Link>
               </div>
             </div>
           </div>
@@ -410,18 +489,18 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border py-16">
+      <footer className="border-t border-zinc-800 py-16">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
-            <div>
-              <Link href="/" className="flex items-center gap-2">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-                  <ChefHat className="h-5 w-5 text-primary-foreground" />
+            <div className="lg:col-span-1">
+              <Link href="/" className="flex items-center gap-3">
+                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-400 to-emerald-600">
+                  <ChefHat className="h-5 w-5 text-zinc-950" />
                 </div>
-                <span className="text-lg font-semibold">BREWAI</span>
+                <span className="text-xl font-bold">BREWAI</span>
               </Link>
-              <p className="mt-4 text-sm text-muted-foreground">
-                AI-powered restaurant operations platform for the modern hospitality industry.
+              <p className="mt-4 max-w-xs text-sm text-zinc-500">
+                AI-powered restaurant operations platform. Smarter inventory, optimized menus, coordinated teams.
               </p>
             </div>
             
@@ -436,15 +515,15 @@ export default function LandingPage() {
               },
               {
                 title: 'Legal',
-                links: ['Privacy', 'Terms', 'Security', 'Cookies'],
+                links: ['Privacy', 'Terms', 'Security', 'Compliance'],
               },
             ].map((col, i) => (
               <div key={i}>
-                <h4 className="mb-4 text-sm font-semibold">{col.title}</h4>
+                <h4 className="mb-4 text-sm font-semibold text-zinc-100">{col.title}</h4>
                 <ul className="space-y-3">
                   {col.links.map((link, j) => (
                     <li key={j}>
-                      <Link href="#" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                      <Link href="#" className="text-sm text-zinc-500 transition-colors hover:text-zinc-300">
                         {link}
                       </Link>
                     </li>
@@ -454,23 +533,14 @@ export default function LandingPage() {
             ))}
           </div>
           
-          <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 md:flex-row">
-            <p className="text-sm text-muted-foreground">
-              {new Date().getFullYear()} BREWAI. All rights reserved.
-            </p>
+          <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-zinc-800 pt-8 sm:flex-row">
+            <p className="text-sm text-zinc-600">2024 BREWAI. All rights reserved.</p>
             <div className="flex gap-6">
-              <Link href="#" className="text-muted-foreground hover:text-foreground">
-                <span className="sr-only">Twitter</span>
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-foreground">
-                <span className="sr-only">GitHub</span>
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd"></path></svg>
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-foreground">
-                <span className="sr-only">LinkedIn</span>
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
-              </Link>
+              {['Twitter', 'LinkedIn', 'GitHub'].map((social) => (
+                <Link key={social} href="#" className="text-sm text-zinc-600 transition-colors hover:text-zinc-400">
+                  {social}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
