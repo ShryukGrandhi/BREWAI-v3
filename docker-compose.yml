@@ -1,0 +1,131 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:6
+    container_name: brewai-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    environment:
+      MONGO_INITDB_DATABASE: brewai
+    networks:
+      - brewai-network
+
+  redis:
+    image: redis:7-alpine
+    container_name: brewai-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - brewai-network
+
+  minio:
+    image: minio/minio
+    container_name: brewai-minio
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    command: server /data --console-address ":9001"
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio_data:/data
+    networks:
+      - brewai-network
+
+  backend:
+    build:
+      context: ./backend-api
+      dockerfile: Dockerfile
+    container_name: brewai-backend
+    env_file: .env
+    ports:
+      - "4000:4000"
+    depends_on:
+      - mongo
+      - redis
+      - minio
+    volumes:
+      - ./backend-api:/app
+      - /app/node_modules
+    networks:
+      - brewai-network
+    command: npm run dev
+
+  frontend-next:
+    build:
+      context: ./frontend-next
+      dockerfile: Dockerfile
+    container_name: brewai-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend-next:/app
+      - /app/node_modules
+      - /app/.next
+    networks:
+      - brewai-network
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:4000/api/v1
+    command: npm run dev
+
+  announcement-agent:
+    build:
+      context: ./agents-v4/announcement-agent
+      dockerfile: Dockerfile
+    container_name: brewai-announcement-agent
+    env_file: .env
+    depends_on:
+      - backend
+      - mongo
+    volumes:
+      - ./agents-v4/announcement-agent:/app
+      - /app/node_modules
+    networks:
+      - brewai-network
+
+  ux-agent:
+    build:
+      context: ./agents-v4/ux-agent
+      dockerfile: Dockerfile
+    container_name: brewai-ux-agent
+    env_file: .env
+    depends_on:
+      - backend
+      - mongo
+    volumes:
+      - ./agents-v4/ux-agent:/app
+      - /app/node_modules
+    networks:
+      - brewai-network
+
+  ops-copilot:
+    build:
+      context: ./agents-v4/ops-copilot
+      dockerfile: Dockerfile
+    container_name: brewai-ops-copilot
+    env_file: .env
+    depends_on:
+      - backend
+      - mongo
+    volumes:
+      - ./agents-v4/ops-copilot:/app
+      - /app/node_modules
+    networks:
+      - brewai-network
+
+volumes:
+  mongo_data:
+  redis_data:
+  minio_data:
+
+networks:
+  brewai-network:
+    driver: bridge
