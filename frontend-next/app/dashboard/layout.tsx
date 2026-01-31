@@ -17,9 +17,12 @@ import {
   X,
   LogOut,
   ChevronDown,
+  BookOpen,
+  MonitorPlay,
 } from 'lucide-react';
 import { useAuth } from '@/lib/auth-context';
 import { SessionTracker } from '@/components/session-tracker';
+import { AIChat } from '@/components/ai-chat';
 
 const navigation = [
   { name: 'Overview', href: '/dashboard', icon: LayoutDashboard },
@@ -27,6 +30,9 @@ const navigation = [
   { name: 'Inventory', href: '/dashboard/inventory', icon: Package },
   { name: 'Analytics', href: '/dashboard/analytics', icon: BarChart3 },
   { name: 'AI Agents', href: '/dashboard/agents', icon: Bot },
+  { name: 'Announcements', href: '/dashboard/announcements', icon: Bell },
+  { name: 'Knowledge Base', href: '/dashboard/knowledge', icon: BookOpen },
+  { name: 'Sessions', href: '/dashboard/sessions', icon: MonitorPlay },
   { name: 'Team', href: '/dashboard/team', icon: Users },
   { name: 'Settings', href: '/dashboard/settings', icon: Settings },
 ];
@@ -186,6 +192,9 @@ export default function DashboardLayout({
         {/* Page content */}
         <main className="flex-1 overflow-y-auto p-4 lg:p-6">{children}</main>
       </div>
+
+      {/* AI Chat Assistant */}
+      <AIChat restaurantId={user?.currentRestaurant?._id || ''} />
     </div>
   );
 }

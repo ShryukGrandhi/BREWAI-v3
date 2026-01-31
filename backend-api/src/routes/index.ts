@@ -9,6 +9,8 @@ import agentRoutes from './agent.routes';
 import sessionRoutes from './session.routes';
 import ingestRoutes from './ingest.routes';
 import searchRoutes from './search.routes';
+import announcementRoutes from './announcement.routes';
+import knowledgeRoutes from './knowledge.routes';
 
 const router = Router();
 
@@ -28,5 +30,7 @@ router.use('/agents', agentRoutes);
 router.use('/sessions', sessionRoutes);
 router.use('/ingest', ingestRoutes);
 router.use('/search', searchRoutes);
+router.use('/announcements', announcementRoutes);
+router.use('/knowledge', knowledgeRoutes);
 
 export default router;
